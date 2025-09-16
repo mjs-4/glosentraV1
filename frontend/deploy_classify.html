@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Classification - Glosentra</title>
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg0: "#0b1120",
+                        bg1: "#111827",
+                        glass: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.10)",
+                        text: "#e5e7eb",
+                        muted: "#9ca3af",
+                        primary: "#8b5cf6",
+                        primary600: "#7c3aed",
+                        accent: "#f472b6",
+                        success: "#10b981",
+                        warning: "#f59e0b",
+                        info: "#3b82f6"
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+        </script>
+
+        <!-- Custom Theme CSS -->
+        <link rel="stylesheet" href="apps/web/glosentra/static/css/theme.css">
+        <!-- API Config (must load before process.js) -->
+        <script src="static/js/config.js"></script>
+    </head>
+    <body
+        class="h-full bg-gradient-to-br from-bg0 via-bg1 to-bg0 text-text font-sans">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-20 pointer-events-none">
+            <div
+                class="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%)"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav
+            class="relative z-50 sticky top-0 bg-bg1/80 backdrop-blur-xl border-b border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Glosentra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="deploy_detect.html"
+                            class="nav-link active">Deploy</a>
+                        <a href="realtime.html" class="nav-link">Real-time</a>
+                        <a href="about.html" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="relative z-10">
+            <section class="py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold text-text mb-4">Image
+                            Classification</h1>
+                        <p class="text-xl text-muted max-w-3xl mx-auto">
+                            Classify images into thousands of categories with
+                            high accuracy.
+                            Perfect for content moderation, e-commerce, and
+                            automated tagging.
+                        </p>
+                        <div class="flex justify-center space-x-2 mt-6">
+                            <span class="badge badge-primary">Multi-class</span>
+                            <span class="badge badge-success">Fast</span>
+                            <span class="badge badge-info">1000+ Classes</span>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <h3
+                                    class="text-lg font-semibold text-text mb-4">Upload
+                                    & Process</h3>
+                                <div id="dropzone"
+                                    class="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-primary transition-colors cursor-pointer">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="w-16 h-16 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mx-auto">
+                                            <svg class="w-8 h-8 text-success"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3
+                                                class="text-lg font-semibold text-text mb-2">Drop
+                                                your image here</h3>
+                                            <p class="text-muted mb-4">or click
+                                                to browse files</p>
+                                            <input type="file" id="fileInput"
+                                                accept="image/*" class="hidden">
+                                            <button
+                                                onclick="document.getElementById('fileInput').click()"
+                                                class="btn-primary">Choose
+                                                File</button>
+                                        </div>
+                                        <p class="text-sm text-muted">Supports
+                                            JPG, PNG, WebP up to 16MB</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6">
+                                    <div
+                                        class="flex items-center justify-between mb-4">
+                                        <label
+                                            class="text-sm font-medium text-text">Model
+                                            Type</label>
+                                        <select id="modelType"
+                                            class="bg-glass border border-border rounded-lg px-3 py-2 text-text">
+                                            <option value="detect">Object
+                                                Detection</option>
+                                            <option value="segment">Instance
+                                                Segmentation</option>
+                                            <option value="classify"
+                                                selected>Image
+                                                Classification</option>
+                                            <option value="pose">Pose
+                                                Estimation</option>
+                                        </select>
+                                    </div>
+
+                                    <button onclick="processImage()"
+                                        class="btn-primary w-full">Process
+                                        Image</button>
+                                </div>
+
+                                <div id="progress" class="hidden mt-4">
+                                    <div class="flex items-center space-x-2">
+                                        <div
+                                            class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                                        <span
+                                            class="text-sm text-text">Processing
+                                            image...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <h3
+                                    class="text-lg font-semibold text-text mb-4">Results</h3>
+                                <div id="results" class="hidden">
+                                    <div class="mb-6 relative">
+                                        <img id="resultImage"
+                                            class="w-full h-64 object-contain rounded-lg border border-border"
+                                            alt="Result">
+                                        <canvas id="overlayCanvas"
+                                            class="absolute inset-0 w-full h-64 pointer-events-none"></canvas>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-4 mb-6">
+                                        <div
+                                            class="bg-glass border border-border rounded-lg p-4">
+                                            <div
+                                                class="text-sm text-muted mb-1">Inference
+                                                Time</div>
+                                            <div id="inferenceTime"
+                                                class="text-lg font-semibold text-text">--</div>
+                                        </div>
+                                        <div
+                                            class="bg-glass border border-border rounded-lg p-4">
+                                            <div
+                                                class="text-sm text-muted mb-1">FPS</div>
+                                            <div id="fps"
+                                                class="text-lg font-semibold text-text">--</div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4
+                                            class="text-lg font-semibold text-text mb-4">Classification
+                                            Results</h4>
+                                        <div id="detections" class="space-y-2">
+                                            <!-- Classifications will be populated here -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="noResults" class="text-center py-12">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-br from-muted/20 to-muted/40 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8 text-muted"
+                                            fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-semibold text-text mb-2">No
+                                        Results Yet</h3>
+                                    <p class="text-muted">Upload an image to see
+                                        classification results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="relative z-10 border-t border-border bg-bg1/50 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="text-center text-muted text-sm">
+                    <p>&copy; 2024 Glosentra. Advanced Computer Vision
+                        Platform.</p>
+                    <p class="mt-2">Built with Ultralytics YOLO and Flask.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="apps/web/glosentra/static/js/process.js"></script>
+        <script>
+            // Initialize dropzone
+            const dropzone = document.getElementById('dropzone');
+            const fileInput = document.getElementById('fileInput');
+            
+            dropzone.addEventListener('click', () => fileInput.click());
+            dropzone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropzone.classList.add('border-primary', 'bg-primary/5');
+            });
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('border-primary', 'bg-primary/5');
+            });
+            dropzone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropzone.classList.remove('border-primary', 'bg-primary/5');
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleFile(files[0]);
+                }
+            });
+            
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    handleFile(e.target.files[0]);
+                }
+            });
+            
+            function handleFile(file) {
+                if (!file.type.startsWith('image/')) {
+                    alert('Please select an image file');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.getElementById('resultImage');
+                    img.src = e.target.result;
+                    document.getElementById('results').classList.remove('hidden');
+                    document.getElementById('noResults').classList.add('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        </script>
+    </body>
+</html>

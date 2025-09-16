@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glosentra - Advanced Computer Vision Platform</title>
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg0: "#0b1120",
+                        bg1: "#111827",
+                        glass: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.10)",
+                        text: "#e5e7eb",
+                        muted: "#9ca3af",
+                        primary: "#8b5cf6",
+                        primary600: "#7c3aed",
+                        accent: "#f472b6",
+                        success: "#10b981",
+                        warning: "#f59e0b",
+                        info: "#3b82f6"
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+        </script>
+
+        <!-- Custom Theme CSS (served from repo) -->
+        <link rel="stylesheet" href="static/css/theme.css">
+
+        <!-- Router for static site navigation -->
+        <script src="static/js/router.js"></script>
+    </head>
+    <body
+        class="h-full bg-gradient-to-br from-bg0 via-bg1 to-bg0 text-text font-sans">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-20 pointer-events-none">
+            <div
+                class="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%)"></div>
+        </div>
+
+        <!-- Navigation (static) -->
+        <nav
+            class="relative z-50 sticky top-0 bg-bg1/80 backdrop-blur-xl border-b border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Glosentra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/index.html" class="nav-link active">Home</a>
+                        <a href="/deploy_detect.html"
+                            class="nav-link">Deploy</a>
+                        <a href="/realtime.html" class="nav-link">Real-time</a>
+                        <a href="/about.html" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="relative z-10">
+            <!-- Hero Section -->
+            <section id="home" class="relative py-20 lg:py-32">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-8">
+                            <div>
+                                <p
+                                    class="text-sm font-medium text-primary mb-4 tracking-wider uppercase">GLOSENTRA
+                                    – ADVANCED COMPUTER VISION</p>
+                                <h1
+                                    class="text-4xl lg:text-6xl font-bold leading-tight">
+                                    <span
+                                        class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Deploy
+                                        Vision AI in Minutes</span>
+                                </h1>
+                                <p
+                                    class="text-xl text-muted mt-6 leading-relaxed">Transform
+                                    your applications with state-of-the-art
+                                    object detection, segmentation,
+                                    classification, and pose estimation. Built
+                                    on YOLO v11 with enterprise-grade
+                                    performance.</p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="/deploy_detect.html"
+                                    class="btn-primary text-center">Try it now
+                                    for free</a>
+                                <a href="/docs.html"
+                                    class="btn-secondary text-center">View
+                                    Docs</a>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                                <div class="relative">
+                                    <h3
+                                        class="text-lg font-semibold text-text mb-4">AI
+                                        Processing Pipeline</h3>
+                                    <div
+                                        class="grid grid-cols-3 gap-4 items-center">
+                                        <div class="text-center">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center mx-auto mb-3">
+                                                <svg
+                                                    class="w-6 h-6 text-primary"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-sm font-medium text-text mb-1">Input</h3>
+                                            <p class="text-xs text-muted">Images
+                                                & Video</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/40 rounded-full flex items-center justify-center mx-auto mb-3 relative">
+                                                <div
+                                                    class="w-12 h-12 bg-gradient-to-br from-success to-success/80 rounded-full flex items-center justify-center">
+                                                    <svg
+                                                        class="w-6 h-6 text-white animate-pulse"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <div
+                                                    class="absolute -top-1 -right-1 w-4 h-4 bg-success rounded-full flex items-center justify-center">
+                                                    <div
+                                                        class="w-2 h-2 bg-white rounded-full animate-ping"></div>
+                                                </div>
+                                            </div>
+                                            <h3
+                                                class="text-sm font-medium text-text mb-1">AI
+                                                Processing</h3>
+                                            <p
+                                                class="text-xs text-muted flex items-center justify-center"><span
+                                                    class="w-2 h-2 bg-success rounded-full mr-1 animate-pulse"></span>Live
+                                                Processing</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-info/20 to-info/40 rounded-full flex items-center justify-center mx-auto mb-3">
+                                                <svg class="w-6 h-6 text-info"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-sm font-medium text-text mb-1">Results</h3>
+                                            <p class="text-xs text-muted">JSON &
+                                                Visual</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Cards Section -->
+            <section id="tasks" class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2
+                            class="text-3xl lg:text-4xl font-bold text-text mb-4">Choose
+                            Your Vision AI Task</h2>
+                        <p class="text-xl text-muted max-w-3xl mx-auto">Deploy
+                            production-ready computer vision models with just a
+                            few clicks. All models are pre-trained and optimized
+                            for real-world performance.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <div
+                                    class="flex items-center justify-between mb-4">
+                                    <h3
+                                        class="text-xl font-semibold text-text">Object
+                                        Detection</h3>
+                                    <div class="flex space-x-2 text-xs">
+                                        <span
+                                            class="badge badge-primary">Real-time</span>
+                                        <span class="badge badge-success">High
+                                            Accuracy</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-6">Detect and localize
+                                    objects in images and video streams. Perfect
+                                    for surveillance, autonomous vehicles, and
+                                    content analysis.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="/deploy_detect.html"
+                                        class="btn-primary">Try
+                                        Detection</a>
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/40 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-primary"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <div
+                                    class="flex items-center justify-between mb-4">
+                                    <h3
+                                        class="text-xl font-semibold text-text">Instance
+                                        Segmentation</h3>
+                                    <div class="flex space-x-2 text-xs">
+                                        <span
+                                            class="badge badge-warning">Pixel-perfect</span>
+                                        <span
+                                            class="badge badge-info">Advanced</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-6">Segment individual
+                                    object instances with pixel-level precision.
+                                    Ideal for medical imaging, robotics, and
+                                    detailed scene understanding.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="/deploy_segment.html"
+                                        class="btn-primary">Try
+                                        Segmentation</a>
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-accent"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zm-2-2H7v4h6v-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <div
+                                    class="flex items-center justify-between mb-4">
+                                    <h3
+                                        class="text-xl font-semibold text-text">Image
+                                        Classification</h3>
+                                    <div class="flex space-x-2 text-xs">
+                                        <span
+                                            class="badge badge-primary">Multi-class</span>
+                                        <span
+                                            class="badge badge-success">Fast</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-6">Classify images into
+                                    thousands of categories with high accuracy.
+                                    Perfect for content moderation, e-commerce,
+                                    and automated tagging.</p>
+                                <div class="flex items-center justify-between">
+                                    <a href="/deploy_classify.html"
+                                        class="btn-primary">Try
+                                        Classification</a>
+                                    <div
+                                        class="w-8 h-8 bg-gradient-to-br from-success/20 to-success/40 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-success"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Docs Placeholder -->
+            <section id="docs" class="py-20 border-t border-border">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-2xl font-semibold mb-4">Documentation</h2>
+                    <p class="text-muted">This static GitHub Pages site
+                        showcases the Glosentra landing page. Full app features
+                        are available in the Flask app.</p>
+                </div>
+            </section>
+
+            <!-- About Placeholder -->
+            <section id="about" class="py-20 border-t border-border">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-2xl font-semibold mb-4">About Glosentra</h2>
+                    <p class="text-muted">Built with Ultralytics YOLO and Flask.
+                        This page is optimized for static hosting on GitHub
+                        Pages.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="relative z-10 border-t border-border bg-bg1/50 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="text-center text-muted text-sm">
+                    <p>&copy; 2025 Glosentra. Advanced Computer Vision
+                        Platform.</p>
+                    <p class="mt-2">Built by Lumitra.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

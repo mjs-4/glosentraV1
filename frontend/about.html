@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About - Glosentra</title>
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg0: "#0b1120",
+                        bg1: "#111827",
+                        glass: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.10)",
+                        text: "#e5e7eb",
+                        muted: "#9ca3af",
+                        primary: "#8b5cf6",
+                        primary600: "#7c3aed",
+                        accent: "#f472b6",
+                        success: "#10b981",
+                        warning: "#f59e0b",
+                        info: "#3b82f6"
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+        </script>
+
+        <!-- Custom Theme CSS -->
+        <link rel="stylesheet" href="apps/web/glosentra/static/css/theme.css">
+    </head>
+    <body class="h-full bg-gradient-to-br from-bg0 via-bg1 to-bg0 text-text font-sans">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-20 pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%)"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-50 sticky top-0 bg-bg1/80 backdrop-blur-xl border-b border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Glosentra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="deploy_detect.html" class="nav-link">Deploy</a>
+                        <a href="realtime.html" class="nav-link">Real-time</a>
+                        <a href="about.html" class="nav-link active">About</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="relative z-10">
+            <section class="py-12">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold text-text mb-4">About Glosentra</h1>
+                        <p class="text-xl text-muted max-w-3xl mx-auto">
+                            Advanced Computer Vision Platform built on state-of-the-art YOLO technology.
+                        </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-text mb-4">Our Mission</h3>
+                            <div class="text-center space-y-6">
+                                <div class="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mx-auto">
+                                    <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-text mb-4">Democratizing Computer Vision</h3>
+                                    <p class="text-muted text-lg leading-relaxed">
+                                        Glosentra makes advanced computer vision accessible to developers, researchers, and businesses of all sizes. We believe that cutting-edge AI should be simple to deploy, fast to run, and easy to integrate into any application.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technology Stack -->
+                    <div class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-text mb-4">Technology Stack</h3>
+                            <div class="space-y-6">
+                                <div class="text-center mb-8">
+                                    <h3 class="text-xl font-semibold text-text mb-4">Built on Modern Technology</h3>
+                                    <p class="text-muted">Glosentra leverages the latest advances in computer vision and web technology.</p>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">YOLO v11</h4>
+                                        <p class="text-sm text-muted">State-of-the-art object detection and segmentation models</p>
+                                    </div>
+
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">Flask & Python</h4>
+                                        <p class="text-sm text-muted">Lightweight, fast web framework with Python's ML ecosystem</p>
+                                    </div>
+
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-success/20 to-success/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">Tailwind CSS</h4>
+                                        <p class="text-sm text-muted">Modern, responsive UI with glassmorphism design</p>
+                                    </div>
+
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-info/20 to-info/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-info" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">PyTorch</h4>
+                                        <p class="text-sm text-muted">GPU-accelerated deep learning inference</p>
+                                    </div>
+
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-warning/20 to-warning/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">SQLite & ChromaDB</h4>
+                                        <p class="text-sm text-muted">Lightweight analytics and document search</p>
+                                    </div>
+
+                                    <div class="bg-glass border border-border rounded-lg p-6 text-center">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/40 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-semibold text-text mb-2">Thread Pooling</h4>
+                                        <p class="text-sm text-muted">High-performance concurrent inference</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-text mb-4">Key Features</h3>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Real-time Inference
+                                        </h4>
+                                        <p class="text-sm text-muted">Process images in milliseconds with optimized YOLO models</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Multiple Tasks
+                                        </h4>
+                                        <p class="text-sm text-muted">Detection, segmentation, classification, and pose estimation</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Easy Deployment
+                                        </h4>
+                                        <p class="text-sm text-muted">One-command setup for development and production</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Analytics Dashboard
+                                        </h4>
+                                        <p class="text-sm text-muted">Monitor performance and usage with built-in analytics</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Fine-tuning Support
+                                        </h4>
+                                        <p class="text-sm text-muted">Customize models for your specific use cases</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-text mb-2 flex items-center">
+                                            <div class="w-6 h-6 bg-gradient-to-br from-success/20 to-success/40 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-3 h-3 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            Modern UI
+                                        </h4>
+                                        <p class="text-sm text-muted">Beautiful, responsive interface with glassmorphism design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance -->
+                    <div class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden mb-8">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-text mb-4">Performance Metrics</h3>
+                            <div class="grid md:grid-cols-3 gap-6 text-center">
+                                <div>
+                                    <div class="text-3xl font-bold text-primary mb-2">&lt;100ms</div>
+                                    <div class="text-sm text-muted">Average Inference Time</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-success mb-2">30+ FPS</div>
+                                    <div class="text-sm text-muted">Real-time Processing</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold text-info mb-2">99.9%</div>
+                                    <div class="text-sm text-muted">Uptime Reliability</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Open Source -->
+                    <div class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-text mb-4">Open Source & License</h3>
+                            <div class="text-center space-y-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mx-auto">
+                                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-text mb-2">Open Source</h3>
+                                    <p class="text-muted mb-4">
+                                        Glosentra is built on open-source technologies and follows the AGPL-3.0 license.
+                                        We believe in transparency and community-driven development.
+                                    </p>
+                                    <div class="flex justify-center space-x-4">
+                                        <a href="#" class="btn-secondary">View on GitHub</a>
+                                        <a href="#" class="btn-secondary">Report Issues</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="relative z-10 border-t border-border bg-bg1/50 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="text-center text-muted text-sm">
+                    <p>&copy; 2024 Glosentra. Advanced Computer Vision Platform.</p>
+                    <p class="mt-2">Built with Ultralytics YOLO and Flask.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

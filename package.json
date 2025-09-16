@@ -1,0 +1,23 @@
+{
+    "name": "glosentra-static",
+    "version": "1.0.0",
+    "description": "Glosentra Computer Vision Platform - Static Site",
+    "main": "index.html",
+    "scripts": {
+        "build": "echo Building static site... && npm run copy-assets",
+        "copy-assets": "node -e \"const fs=require('fs');const path=require('path');if(!fs.existsSync('dist'))fs.mkdirSync('dist',{recursive:true});fs.cpSync('frontend/static','dist/static',{recursive:true});['index.html','about.html','docs.html','analytics.html','deploy_detect.html','deploy_segment.html','deploy_classify.html','deploy_pose.html','realtime.html','404.html'].forEach(f=>{if(fs.existsSync(f))fs.copyFileSync(f,'dist/'+f)});\"",
+        "serve": "npx http-server dist -p 8000 -c-1 | cat",
+        "dev": "npm run build && npm run serve",
+        "deploy": "npm run build && echo Static site ready for GitHub Pages"
+    },
+    "keywords": [
+        "computer-vision",
+        "yolo",
+        "ai",
+        "static-site"
+    ],
+    "author": "Lumitra",
+    "license": "MIT",
+    "devDependencies": {},
+    "dependencies": {}
+}

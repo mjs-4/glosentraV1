@@ -1,0 +1,1339 @@
+2025-09-16 17:05:48.610 | INFO     | apps.web.glosentra:_preload:43 - Starting model preload...
+2025-09-16 17:05:48.614 | ERROR    | apps.web.glosentra:_preload:47 - Model preload failed: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-09-16 17:11:27.480 | ERROR    | apps.web.glosentra.routes.api:get_models:42 - Error getting models: 'property' object has no attribute 'items'
+2025-09-16 17:11:35.522 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:11:35.547 | INFO     | apps.web.glosentra.core.chroma_integration:collection:49 - Created new ChromaDB documents collection
+2025-09-16 17:11:37.621 | INFO     | apps.web.glosentra.routes.api:process_image:91 - Processing detect inference for 823 bytes
+2025-09-16 17:11:37.664 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-09-16 17:11:37.665 | ERROR    | apps.web.glosentra.routes.api:process_image:115 - Error processing image: 'property' object has no attribute 'get'
+2025-09-16 17:11:39.700 | INFO     | apps.web.glosentra.routes.api:process_image:91 - Processing classify inference for 823 bytes
+2025-09-16 17:11:39.701 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for classify: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-09-16 17:11:39.702 | ERROR    | apps.web.glosentra.routes.api:process_image:115 - Error processing image: 'property' object has no attribute 'get'
+2025-09-16 17:11:41.724 | INFO     | apps.web.glosentra.routes.api:process_image:91 - Processing detect inference for 12 bytes
+2025-09-16 17:11:41.841 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 17:11:41.842 | ERROR    | apps.web.glosentra.routes.api:process_image:115 - Error processing image: 'property' object has no attribute 'get'
+2025-09-16 17:11:49.230 | ERROR    | apps.web.glosentra.routes.api:get_models:42 - Error getting models: 'property' object has no attribute 'items'
+2025-09-16 17:12:00.722 | ERROR    | apps.web.glosentra.routes.api:get_models:54 - Error getting models: 'property' object has no attribute 'get'
+2025-09-16 17:12:20.708 | ERROR    | apps.web.glosentra.routes.api:get_models:42 - Error getting models: 'Config' object has no attribute 'get_model_paths'
+2025-09-16 17:12:39.725 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for detect, using default
+2025-09-16 17:12:39.726 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading detect model from yolo11n.pt
+2025-09-16 17:12:43.612 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:12:43.612 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:12:43.612 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:12:44.407 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:12:44.738 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:12:44.738 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:12:44.738 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:12:45.051 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:12:45.364 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:12:45.365 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:12:45.365 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:12:48.694 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:13:00.832 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:13:00.832 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:13:01.193 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:13:01.618 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:13:01.619 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:13:01.619 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:13:01.899 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:13:02.200 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:13:08.972 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:13:08.974 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:13:11.058 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 17:13:13.259 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 17:13:13.260 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for classify: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-09-16 17:13:15.313 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 17:13:15.381 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 17:14:14.480 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:14:14.481 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:14:15.164 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:14:15.560 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:14:15.561 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:14:15.561 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:14:15.968 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:14:16.347 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:14:26.595 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 17:14:28.727 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 17:14:28.727 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for classify: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-09-16 17:14:30.769 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 17:14:30.778 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 17:20:10.753 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:20:10.754 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:20:50.911 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:20:50.911 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:26:36.887 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for detect, using default
+2025-09-16 17:26:36.889 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading detect model from yolo11n.pt
+2025-09-16 17:26:37.013 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:26:37.402 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:26:37.403 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:26:37.403 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:26:38.356 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:26:38.839 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:26:38.842 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:26:38.843 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:26:39.398 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:26:39.918 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:26:39.922 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:26:39.928 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:26:40.141 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:26:40.466 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:26:40.466 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:28:46.416 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:28:46.609 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:28:46.609 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:28:46.609 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:28:47.528 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:28:48.000 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:28:48.000 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:28:48.000 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:28:48.474 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:28:48.953 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:28:48.954 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:28:48.954 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:28:49.060 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:28:49.205 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:28:49.205 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:28:58.065 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:28:58.087 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:32:10.450 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:32:10.716 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:32:10.716 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:32:10.717 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:32:11.932 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:32:12.448 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:32:12.449 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:32:12.449 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:32:12.943 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:32:13.476 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:32:13.477 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:32:13.477 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:32:13.561 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:32:13.697 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:32:13.697 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:32:21.116 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:32:21.117 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:33:32.003 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:33:32.222 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:33:32.222 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:33:32.224 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:33:33.132 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:33:33.653 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:33:33.653 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:33:33.653 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:33:34.140 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:33:34.602 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:33:34.602 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:33:34.602 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:33:34.685 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:33:34.814 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:33:34.814 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:33:47.958 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:33:47.959 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:37:22.405 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:37:22.596 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:37:22.596 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:37:22.596 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:37:23.481 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:37:23.935 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:37:23.935 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:37:23.935 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:37:24.419 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:37:24.898 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:37:24.898 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:37:24.898 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:37:24.987 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:37:25.113 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:37:25.114 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:38:21.111 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:38:21.112 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:41:05.048 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded detect model
+2025-09-16 17:41:05.258 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up detect model
+2025-09-16 17:41:05.258 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for segment, using default
+2025-09-16 17:41:05.259 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading segment model from yolo11n-segment.pt
+2025-09-16 17:41:06.163 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:41:06.649 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback segment model: [Errno 2] No such file or directory: 'yolo11n-segment.pt'
+2025-09-16 17:41:06.649 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for classify, using default
+2025-09-16 17:41:06.649 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading classify model from yolo11n-classify.pt
+2025-09-16 17:41:07.163 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:71 - Failed to load classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:41:07.648 | ERROR    | apps.web.glosentra.core.model_registry:_load_model:79 - Failed to load fallback classify model: [Errno 2] No such file or directory: 'yolo11n-classify.pt'
+2025-09-16 17:41:07.648 | WARNING  | apps.web.glosentra.core.model_registry:_load_model:62 - Model file not found for pose, using default
+2025-09-16 17:41:07.656 | INFO     | apps.web.glosentra.core.model_registry:_load_model:66 - Loading pose model from yolo11n-pose.pt
+2025-09-16 17:41:07.742 | INFO     | apps.web.glosentra.core.model_registry:_load_model:69 - Successfully loaded pose model
+2025-09-16 17:41:07.858 | INFO     | apps.web.glosentra.core.model_registry:preload_models:91 - Warmed up pose model
+2025-09-16 17:41:07.858 | INFO     | apps.web.glosentra:_preload:47 - Model preload completed
+2025-09-16 17:41:43.506 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:41:43.508 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:44:39.194 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded detect model
+2025-09-16 17:44:39.412 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up detect model
+2025-09-16 17:44:39.412 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading segment model from models/weights/yolo11n-seg.pt
+2025-09-16 17:44:39.497 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded segment model
+2025-09-16 17:44:39.669 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up segment model
+2025-09-16 17:44:39.669 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading classify model from models/weights/yolo11n-cls.pt
+2025-09-16 17:44:40.764 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded classify model
+2025-09-16 17:44:40.850 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up classify model
+2025-09-16 17:44:40.852 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading pose model from models/weights/yolo11n-pose.pt
+2025-09-16 17:44:40.954 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded pose model
+2025-09-16 17:44:41.079 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up pose model
+2025-09-16 17:44:41.079 | INFO     | apps.web.glosentra:_preload:57 - Model preload completed
+2025-09-16 17:46:13.631 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:46:13.633 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:47:14.812 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded detect model
+2025-09-16 17:47:15.009 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up detect model
+2025-09-16 17:47:15.009 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading segment model from models/weights/yolo11n-seg.pt
+2025-09-16 17:47:15.090 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded segment model
+2025-09-16 17:47:15.229 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up segment model
+2025-09-16 17:47:15.229 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading classify model from models/weights/yolo11n-cls.pt
+2025-09-16 17:47:16.278 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded classify model
+2025-09-16 17:47:16.335 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up classify model
+2025-09-16 17:47:16.336 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading pose model from models/weights/yolo11n-pose.pt
+2025-09-16 17:47:16.378 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded pose model
+2025-09-16 17:47:16.503 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up pose model
+2025-09-16 17:47:16.503 | INFO     | apps.web.glosentra:_preload:57 - Model preload completed
+2025-09-16 17:50:12.773 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded detect model
+2025-09-16 17:50:12.990 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up detect model
+2025-09-16 17:50:12.990 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading segment model from models/weights/yolo11n-seg.pt
+2025-09-16 17:50:13.073 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded segment model
+2025-09-16 17:50:13.237 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up segment model
+2025-09-16 17:50:13.238 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading classify model from models/weights/yolo11n-cls.pt
+2025-09-16 17:50:14.236 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded classify model
+2025-09-16 17:50:14.284 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up classify model
+2025-09-16 17:50:14.285 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading pose model from models/weights/yolo11n-pose.pt
+2025-09-16 17:50:14.320 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded pose model
+2025-09-16 17:50:14.442 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up pose model
+2025-09-16 17:50:14.442 | INFO     | apps.web.glosentra:_preload:57 - Model preload completed
+2025-09-16 17:50:22.994 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 24129 bytes
+2025-09-16 17:50:51.419 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 24129 bytes
+2025-09-16 17:51:00.036 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 24129 bytes
+2025-09-16 17:51:02.909 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 24129 bytes
+2025-09-16 17:51:06.227 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 24129 bytes
+2025-09-16 17:54:44.047 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded detect model
+2025-09-16 17:54:44.290 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up detect model
+2025-09-16 17:54:44.290 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading segment model from models/weights/yolo11n-seg.pt
+2025-09-16 17:54:44.429 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded segment model
+2025-09-16 17:54:44.602 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up segment model
+2025-09-16 17:54:44.602 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading classify model from models/weights/yolo11n-cls.pt
+2025-09-16 17:54:45.687 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded classify model
+2025-09-16 17:54:45.753 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up classify model
+2025-09-16 17:54:45.753 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading pose model from models/weights/yolo11n-pose.pt
+2025-09-16 17:54:45.882 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded pose model
+2025-09-16 17:54:46.016 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up pose model
+2025-09-16 17:54:46.016 | INFO     | apps.web.glosentra:_preload:57 - Model preload completed
+2025-09-16 17:55:33.997 | INFO     | apps.web.glosentra.core.chroma_integration:client:25 - ChromaDB client initialized at data\chroma_db
+2025-09-16 17:55:33.998 | INFO     | apps.web.glosentra.core.chroma_integration:collection:41 - Loaded existing ChromaDB documents collection
+2025-09-16 17:57:43.358 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7440 bytes
+2025-09-16 17:57:43.501 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7425 bytes
+2025-09-16 17:57:43.614 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7441 bytes
+2025-09-16 17:57:43.691 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7427 bytes
+2025-09-16 17:57:43.763 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:43.831 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7444 bytes
+2025-09-16 17:57:43.903 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7428 bytes
+2025-09-16 17:57:43.971 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7364 bytes
+2025-09-16 17:57:44.040 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7454 bytes
+2025-09-16 17:57:44.108 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7442 bytes
+2025-09-16 17:57:44.179 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7461 bytes
+2025-09-16 17:57:44.246 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7410 bytes
+2025-09-16 17:57:44.309 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7404 bytes
+2025-09-16 17:57:44.399 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7448 bytes
+2025-09-16 17:57:44.480 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7437 bytes
+2025-09-16 17:57:44.551 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7391 bytes
+2025-09-16 17:57:44.619 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7415 bytes
+2025-09-16 17:57:44.688 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7456 bytes
+2025-09-16 17:57:44.758 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7421 bytes
+2025-09-16 17:57:44.831 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7365 bytes
+2025-09-16 17:57:44.900 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7431 bytes
+2025-09-16 17:57:44.967 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7400 bytes
+2025-09-16 17:57:45.035 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7412 bytes
+2025-09-16 17:57:45.106 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7403 bytes
+2025-09-16 17:57:45.175 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7412 bytes
+2025-09-16 17:57:45.245 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:45.314 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7448 bytes
+2025-09-16 17:57:45.390 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:45.464 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7414 bytes
+2025-09-16 17:57:45.535 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7403 bytes
+2025-09-16 17:57:45.606 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7404 bytes
+2025-09-16 17:57:45.677 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7415 bytes
+2025-09-16 17:57:45.746 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7438 bytes
+2025-09-16 17:57:45.813 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7452 bytes
+2025-09-16 17:57:45.883 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7405 bytes
+2025-09-16 17:57:45.949 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7429 bytes
+2025-09-16 17:57:46.022 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7450 bytes
+2025-09-16 17:57:46.097 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7434 bytes
+2025-09-16 17:57:46.162 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7426 bytes
+2025-09-16 17:57:46.230 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7406 bytes
+2025-09-16 17:57:46.297 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:46.362 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7449 bytes
+2025-09-16 17:57:46.425 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7444 bytes
+2025-09-16 17:57:46.496 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7412 bytes
+2025-09-16 17:57:46.557 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7421 bytes
+2025-09-16 17:57:46.616 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7428 bytes
+2025-09-16 17:57:46.681 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7482 bytes
+2025-09-16 17:57:46.748 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:46.815 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:46.878 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7428 bytes
+2025-09-16 17:57:46.944 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7434 bytes
+2025-09-16 17:57:47.009 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7433 bytes
+2025-09-16 17:57:47.072 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7444 bytes
+2025-09-16 17:57:47.139 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7427 bytes
+2025-09-16 17:57:47.209 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7412 bytes
+2025-09-16 17:57:47.288 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7448 bytes
+2025-09-16 17:57:47.357 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:47.426 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7432 bytes
+2025-09-16 17:57:47.489 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7391 bytes
+2025-09-16 17:57:47.556 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7464 bytes
+2025-09-16 17:57:47.626 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7477 bytes
+2025-09-16 17:57:47.694 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7461 bytes
+2025-09-16 17:57:47.764 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7438 bytes
+2025-09-16 17:57:47.851 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7405 bytes
+2025-09-16 17:57:47.940 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7426 bytes
+2025-09-16 17:57:48.020 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7415 bytes
+2025-09-16 17:57:48.088 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7406 bytes
+2025-09-16 17:57:48.158 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7438 bytes
+2025-09-16 17:57:48.228 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7444 bytes
+2025-09-16 17:57:48.293 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7441 bytes
+2025-09-16 17:57:48.367 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7479 bytes
+2025-09-16 17:57:48.443 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:48.509 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7438 bytes
+2025-09-16 17:57:48.574 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7367 bytes
+2025-09-16 17:57:48.642 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7217 bytes
+2025-09-16 17:57:48.706 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7317 bytes
+2025-09-16 17:57:48.771 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7487 bytes
+2025-09-16 17:57:48.834 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7468 bytes
+2025-09-16 17:57:48.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7454 bytes
+2025-09-16 17:57:48.964 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7461 bytes
+2025-09-16 17:57:49.032 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7431 bytes
+2025-09-16 17:57:49.101 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7430 bytes
+2025-09-16 17:57:49.172 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7457 bytes
+2025-09-16 17:57:49.240 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7430 bytes
+2025-09-16 17:57:49.309 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7467 bytes
+2025-09-16 17:57:49.378 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7465 bytes
+2025-09-16 17:57:49.449 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7272 bytes
+2025-09-16 17:57:49.518 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7253 bytes
+2025-09-16 17:57:49.588 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7246 bytes
+2025-09-16 17:57:49.656 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7748 bytes
+2025-09-16 17:57:49.728 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7748 bytes
+2025-09-16 17:57:49.799 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7787 bytes
+2025-09-16 17:57:49.873 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7976 bytes
+2025-09-16 17:57:49.943 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7989 bytes
+2025-09-16 17:57:50.048 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8145 bytes
+2025-09-16 17:57:50.127 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8120 bytes
+2025-09-16 17:57:50.196 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7901 bytes
+2025-09-16 17:57:50.268 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7797 bytes
+2025-09-16 17:57:50.338 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7609 bytes
+2025-09-16 17:57:50.408 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7203 bytes
+2025-09-16 17:57:50.477 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7310 bytes
+2025-09-16 17:57:50.541 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7243 bytes
+2025-09-16 17:57:50.605 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:50.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7560 bytes
+2025-09-16 17:57:50.734 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7642 bytes
+2025-09-16 17:57:50.795 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7502 bytes
+2025-09-16 17:57:50.860 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7477 bytes
+2025-09-16 17:57:50.934 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7609 bytes
+2025-09-16 17:57:51.005 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7447 bytes
+2025-09-16 17:57:51.071 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7565 bytes
+2025-09-16 17:57:51.142 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7515 bytes
+2025-09-16 17:57:51.211 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7213 bytes
+2025-09-16 17:57:51.282 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7171 bytes
+2025-09-16 17:57:51.350 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7270 bytes
+2025-09-16 17:57:51.419 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7484 bytes
+2025-09-16 17:57:51.482 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7542 bytes
+2025-09-16 17:57:51.552 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7418 bytes
+2025-09-16 17:57:51.621 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7729 bytes
+2025-09-16 17:57:51.692 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7683 bytes
+2025-09-16 17:57:51.761 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7488 bytes
+2025-09-16 17:57:51.831 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7538 bytes
+2025-09-16 17:57:51.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7469 bytes
+2025-09-16 17:57:51.966 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7456 bytes
+2025-09-16 17:57:52.033 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7449 bytes
+2025-09-16 17:57:52.106 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7499 bytes
+2025-09-16 17:57:52.173 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7500 bytes
+2025-09-16 17:57:52.241 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7482 bytes
+2025-09-16 17:57:52.307 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7498 bytes
+2025-09-16 17:57:52.375 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7483 bytes
+2025-09-16 17:57:52.442 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7416 bytes
+2025-09-16 17:57:52.509 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7464 bytes
+2025-09-16 17:57:52.584 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7607 bytes
+2025-09-16 17:57:52.657 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7606 bytes
+2025-09-16 17:57:52.727 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7692 bytes
+2025-09-16 17:57:52.793 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7703 bytes
+2025-09-16 17:57:52.868 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7679 bytes
+2025-09-16 17:57:52.940 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7722 bytes
+2025-09-16 17:57:53.012 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7722 bytes
+2025-09-16 17:57:53.082 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7746 bytes
+2025-09-16 17:57:53.150 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7770 bytes
+2025-09-16 17:57:53.217 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7742 bytes
+2025-09-16 17:57:53.286 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7735 bytes
+2025-09-16 17:57:53.354 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7747 bytes
+2025-09-16 17:57:53.419 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7747 bytes
+2025-09-16 17:57:53.488 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7729 bytes
+2025-09-16 17:57:53.554 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7748 bytes
+2025-09-16 17:57:53.621 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7765 bytes
+2025-09-16 17:57:53.688 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7742 bytes
+2025-09-16 17:57:53.752 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7687 bytes
+2025-09-16 17:57:53.817 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7643 bytes
+2025-09-16 17:57:53.883 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7693 bytes
+2025-09-16 17:57:53.945 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7709 bytes
+2025-09-16 17:57:54.009 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7699 bytes
+2025-09-16 17:57:54.070 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7746 bytes
+2025-09-16 17:57:54.134 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7694 bytes
+2025-09-16 17:57:54.199 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7717 bytes
+2025-09-16 17:57:54.263 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7665 bytes
+2025-09-16 17:57:54.329 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7503 bytes
+2025-09-16 17:57:54.394 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7326 bytes
+2025-09-16 17:57:54.467 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7346 bytes
+2025-09-16 17:57:54.544 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7369 bytes
+2025-09-16 17:57:54.621 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7336 bytes
+2025-09-16 17:57:54.691 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7439 bytes
+2025-09-16 17:57:54.764 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7480 bytes
+2025-09-16 17:57:54.832 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7437 bytes
+2025-09-16 17:57:54.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7472 bytes
+2025-09-16 17:57:54.966 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7513 bytes
+2025-09-16 17:57:55.032 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7461 bytes
+2025-09-16 17:57:55.103 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7484 bytes
+2025-09-16 17:57:55.168 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7451 bytes
+2025-09-16 17:57:55.233 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7422 bytes
+2025-09-16 17:57:55.308 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7434 bytes
+2025-09-16 17:57:55.382 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7409 bytes
+2025-09-16 17:57:55.455 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7444 bytes
+2025-09-16 17:57:55.530 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7423 bytes
+2025-09-16 17:57:55.609 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7290 bytes
+2025-09-16 17:57:55.685 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7331 bytes
+2025-09-16 17:57:55.762 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7159 bytes
+2025-09-16 17:57:55.833 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7336 bytes
+2025-09-16 17:57:55.907 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7645 bytes
+2025-09-16 17:57:55.977 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7508 bytes
+2025-09-16 17:57:56.044 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7308 bytes
+2025-09-16 17:57:56.116 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7408 bytes
+2025-09-16 17:57:56.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7536 bytes
+2025-09-16 17:57:56.257 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7480 bytes
+2025-09-16 17:57:56.350 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7472 bytes
+2025-09-16 17:57:56.461 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7482 bytes
+2025-09-16 17:57:56.538 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7433 bytes
+2025-09-16 17:57:56.610 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7502 bytes
+2025-09-16 17:57:56.680 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7453 bytes
+2025-09-16 17:57:56.756 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7485 bytes
+2025-09-16 17:57:56.824 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:56.894 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7445 bytes
+2025-09-16 17:57:56.966 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7519 bytes
+2025-09-16 17:57:57.043 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7503 bytes
+2025-09-16 17:57:57.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7516 bytes
+2025-09-16 17:57:57.232 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7534 bytes
+2025-09-16 17:57:57.313 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7505 bytes
+2025-09-16 17:57:57.387 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7522 bytes
+2025-09-16 17:57:57.457 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7510 bytes
+2025-09-16 17:57:57.526 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7518 bytes
+2025-09-16 17:57:57.598 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7483 bytes
+2025-09-16 17:57:57.665 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7484 bytes
+2025-09-16 17:57:57.735 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7506 bytes
+2025-09-16 17:57:57.803 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7517 bytes
+2025-09-16 17:57:57.874 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7502 bytes
+2025-09-16 17:57:57.945 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7478 bytes
+2025-09-16 17:57:58.011 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7377 bytes
+2025-09-16 17:57:58.079 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7336 bytes
+2025-09-16 17:57:58.151 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7314 bytes
+2025-09-16 17:57:58.217 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7351 bytes
+2025-09-16 17:57:58.284 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7435 bytes
+2025-09-16 17:57:58.355 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7453 bytes
+2025-09-16 17:57:58.426 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7372 bytes
+2025-09-16 17:57:58.497 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7402 bytes
+2025-09-16 17:57:58.565 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7439 bytes
+2025-09-16 17:57:58.639 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7436 bytes
+2025-09-16 17:57:58.710 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7417 bytes
+2025-09-16 17:57:58.784 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7413 bytes
+2025-09-16 17:57:58.855 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7422 bytes
+2025-09-16 17:57:58.924 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7413 bytes
+2025-09-16 17:57:58.992 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7397 bytes
+2025-09-16 17:57:59.060 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7431 bytes
+2025-09-16 17:57:59.129 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7443 bytes
+2025-09-16 17:57:59.202 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7424 bytes
+2025-09-16 17:57:59.269 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7447 bytes
+2025-09-16 17:57:59.342 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7406 bytes
+2025-09-16 17:57:59.415 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7300 bytes
+2025-09-16 17:57:59.483 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7397 bytes
+2025-09-16 17:57:59.556 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7476 bytes
+2025-09-16 17:57:59.628 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7446 bytes
+2025-09-16 17:57:59.702 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7447 bytes
+2025-09-16 17:57:59.772 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7437 bytes
+2025-09-16 17:57:59.845 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7498 bytes
+2025-09-16 17:57:59.913 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7492 bytes
+2025-09-16 17:57:59.983 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7478 bytes
+2025-09-16 17:58:00.054 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7477 bytes
+2025-09-16 17:58:00.124 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7506 bytes
+2025-09-16 17:58:00.200 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7481 bytes
+2025-09-16 17:58:00.268 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7508 bytes
+2025-09-16 17:58:00.339 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7502 bytes
+2025-09-16 17:58:00.418 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7491 bytes
+2025-09-16 17:58:00.501 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7494 bytes
+2025-09-16 17:58:00.583 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7474 bytes
+2025-09-16 17:58:00.658 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7496 bytes
+2025-09-16 17:58:00.726 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7509 bytes
+2025-09-16 17:58:00.793 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7487 bytes
+2025-09-16 17:58:00.861 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7554 bytes
+2025-09-16 17:58:00.929 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7496 bytes
+2025-09-16 17:58:00.998 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7510 bytes
+2025-09-16 17:58:01.068 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7504 bytes
+2025-09-16 17:58:01.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7472 bytes
+2025-09-16 17:58:01.205 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7477 bytes
+2025-09-16 18:03:21.724 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7104 bytes
+2025-09-16 18:03:21.831 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7101 bytes
+2025-09-16 18:03:21.925 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7013 bytes
+2025-09-16 18:03:22.024 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7065 bytes
+2025-09-16 18:03:22.121 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6987 bytes
+2025-09-16 18:03:22.218 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6946 bytes
+2025-09-16 18:03:22.314 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6957 bytes
+2025-09-16 18:03:22.412 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6941 bytes
+2025-09-16 18:03:22.508 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6929 bytes
+2025-09-16 18:03:22.599 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6903 bytes
+2025-09-16 18:03:22.696 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6936 bytes
+2025-09-16 18:03:22.787 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6973 bytes
+2025-09-16 18:03:22.876 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6780 bytes
+2025-09-16 18:03:22.968 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6782 bytes
+2025-09-16 18:03:23.053 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6567 bytes
+2025-09-16 18:03:23.140 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6835 bytes
+2025-09-16 18:03:23.225 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7068 bytes
+2025-09-16 18:03:23.316 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 6786 bytes
+2025-09-16 18:03:23.397 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8141 bytes
+2025-09-16 18:03:23.487 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7772 bytes
+2025-09-16 18:03:23.573 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7426 bytes
+2025-09-16 18:03:23.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7786 bytes
+2025-09-16 18:03:23.758 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7505 bytes
+2025-09-16 18:03:23.843 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8034 bytes
+2025-09-16 18:03:23.931 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7908 bytes
+2025-09-16 18:03:24.014 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7967 bytes
+2025-09-16 18:03:24.105 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7924 bytes
+2025-09-16 18:03:24.190 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7970 bytes
+2025-09-16 18:03:24.280 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7934 bytes
+2025-09-16 18:03:24.371 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8000 bytes
+2025-09-16 18:03:24.466 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7737 bytes
+2025-09-16 18:03:24.564 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7620 bytes
+2025-09-16 18:03:24.647 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7949 bytes
+2025-09-16 18:03:24.743 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7982 bytes
+2025-09-16 18:03:24.836 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8356 bytes
+2025-09-16 18:03:24.934 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8154 bytes
+2025-09-16 18:03:25.022 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7541 bytes
+2025-09-16 18:03:25.119 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 7870 bytes
+2025-09-16 18:03:25.202 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8235 bytes
+2025-09-16 18:03:25.296 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8169 bytes
+2025-09-16 18:03:25.389 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8226 bytes
+2025-09-16 18:03:25.483 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8245 bytes
+2025-09-16 18:03:25.573 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8323 bytes
+2025-09-16 18:03:25.661 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8286 bytes
+2025-09-16 18:03:25.754 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8178 bytes
+2025-09-16 18:03:25.844 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8265 bytes
+2025-09-16 18:03:25.973 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8634 bytes
+2025-09-16 18:03:26.068 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8807 bytes
+2025-09-16 18:03:26.169 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8716 bytes
+2025-09-16 18:03:26.267 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8705 bytes
+2025-09-16 18:03:26.356 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8721 bytes
+2025-09-16 18:03:26.453 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8722 bytes
+2025-09-16 18:03:26.549 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8798 bytes
+2025-09-16 18:03:26.641 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8788 bytes
+2025-09-16 18:03:26.730 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8807 bytes
+2025-09-16 18:03:26.822 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8801 bytes
+2025-09-16 18:03:26.913 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8732 bytes
+2025-09-16 18:03:27.002 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8546 bytes
+2025-09-16 18:03:27.085 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8608 bytes
+2025-09-16 18:03:27.174 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8684 bytes
+2025-09-16 18:03:27.258 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8605 bytes
+2025-09-16 18:03:27.349 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8684 bytes
+2025-09-16 18:03:27.439 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8635 bytes
+2025-09-16 18:03:27.528 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8553 bytes
+2025-09-16 18:03:27.613 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8668 bytes
+2025-09-16 18:03:27.702 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8658 bytes
+2025-09-16 18:03:27.796 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8688 bytes
+2025-09-16 18:03:27.882 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8716 bytes
+2025-09-16 18:03:27.973 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8749 bytes
+2025-09-16 18:03:28.063 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8512 bytes
+2025-09-16 18:03:28.162 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8392 bytes
+2025-09-16 18:03:28.251 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8403 bytes
+2025-09-16 18:03:28.349 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8327 bytes
+2025-09-16 18:03:28.441 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8377 bytes
+2025-09-16 18:03:28.525 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8323 bytes
+2025-09-16 18:03:28.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8299 bytes
+2025-09-16 18:03:28.711 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8401 bytes
+2025-09-16 18:03:28.799 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8422 bytes
+2025-09-16 18:03:28.890 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8637 bytes
+2025-09-16 18:03:28.983 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8764 bytes
+2025-09-16 18:03:29.078 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8857 bytes
+2025-09-16 18:03:29.181 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9051 bytes
+2025-09-16 18:03:29.279 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9198 bytes
+2025-09-16 18:03:29.373 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9158 bytes
+2025-09-16 18:03:29.474 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9123 bytes
+2025-09-16 18:03:29.571 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9150 bytes
+2025-09-16 18:03:29.669 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9119 bytes
+2025-09-16 18:03:29.764 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9117 bytes
+2025-09-16 18:03:29.848 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9191 bytes
+2025-09-16 18:03:29.941 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9155 bytes
+2025-09-16 18:03:30.029 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9174 bytes
+2025-09-16 18:03:30.131 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9211 bytes
+2025-09-16 18:03:30.225 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9239 bytes
+2025-09-16 18:03:30.317 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9191 bytes
+2025-09-16 18:03:30.411 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9211 bytes
+2025-09-16 18:03:30.502 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9222 bytes
+2025-09-16 18:03:30.601 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9191 bytes
+2025-09-16 18:03:30.701 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9194 bytes
+2025-09-16 18:03:30.807 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9241 bytes
+2025-09-16 18:03:30.913 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9208 bytes
+2025-09-16 18:03:31.002 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9265 bytes
+2025-09-16 18:03:31.098 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9270 bytes
+2025-09-16 18:03:31.196 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9254 bytes
+2025-09-16 18:03:31.287 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9244 bytes
+2025-09-16 18:03:31.386 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9261 bytes
+2025-09-16 18:03:31.482 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9282 bytes
+2025-09-16 18:03:31.584 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9272 bytes
+2025-09-16 18:03:31.681 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9261 bytes
+2025-09-16 18:03:31.771 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9194 bytes
+2025-09-16 18:03:31.864 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9215 bytes
+2025-09-16 18:03:31.953 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9240 bytes
+2025-09-16 18:03:32.044 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9205 bytes
+2025-09-16 18:03:32.135 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9180 bytes
+2025-09-16 18:03:32.224 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9196 bytes
+2025-09-16 18:03:32.322 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9198 bytes
+2025-09-16 18:03:32.419 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9184 bytes
+2025-09-16 18:03:32.516 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9152 bytes
+2025-09-16 18:03:32.614 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9238 bytes
+2025-09-16 18:03:32.711 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9230 bytes
+2025-09-16 18:03:32.806 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9186 bytes
+2025-09-16 18:03:32.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9159 bytes
+2025-09-16 18:03:32.995 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9207 bytes
+2025-09-16 18:03:33.092 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9258 bytes
+2025-09-16 18:03:33.198 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9233 bytes
+2025-09-16 18:03:33.288 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9280 bytes
+2025-09-16 18:03:33.384 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9216 bytes
+2025-09-16 18:03:33.480 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9199 bytes
+2025-09-16 18:03:33.572 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9177 bytes
+2025-09-16 18:03:33.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9216 bytes
+2025-09-16 18:03:33.764 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9203 bytes
+2025-09-16 18:03:33.861 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9272 bytes
+2025-09-16 18:03:33.969 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9209 bytes
+2025-09-16 18:03:34.084 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9195 bytes
+2025-09-16 18:03:34.191 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9151 bytes
+2025-09-16 18:03:34.287 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9202 bytes
+2025-09-16 18:03:34.379 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9179 bytes
+2025-09-16 18:03:34.475 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9134 bytes
+2025-09-16 18:03:34.573 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9145 bytes
+2025-09-16 18:03:34.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9113 bytes
+2025-09-16 18:03:34.759 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9194 bytes
+2025-09-16 18:03:34.841 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9096 bytes
+2025-09-16 18:03:34.934 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9119 bytes
+2025-09-16 18:03:35.039 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 9032 bytes
+2025-09-16 18:03:35.141 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8978 bytes
+2025-09-16 18:03:35.237 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8821 bytes
+2025-09-16 18:03:35.337 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8689 bytes
+2025-09-16 18:03:35.428 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8613 bytes
+2025-09-16 18:03:35.515 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8469 bytes
+2025-09-16 18:03:35.598 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8418 bytes
+2025-09-16 18:03:35.688 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8394 bytes
+2025-09-16 18:03:35.772 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8399 bytes
+2025-09-16 18:03:35.862 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8391 bytes
+2025-09-16 18:03:35.948 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8396 bytes
+2025-09-16 18:03:36.043 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8387 bytes
+2025-09-16 18:03:36.134 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8427 bytes
+2025-09-16 18:03:36.226 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8428 bytes
+2025-09-16 18:03:36.316 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8430 bytes
+2025-09-16 18:03:36.405 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8422 bytes
+2025-09-16 18:03:36.502 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8433 bytes
+2025-09-16 18:03:36.599 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8444 bytes
+2025-09-16 18:03:36.698 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8380 bytes
+2025-09-16 18:03:36.779 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8445 bytes
+2025-09-16 18:03:36.879 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8397 bytes
+2025-09-16 18:03:36.975 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8438 bytes
+2025-09-16 18:03:37.073 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8400 bytes
+2025-09-16 18:03:37.168 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8389 bytes
+2025-09-16 18:03:37.259 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8364 bytes
+2025-09-16 18:03:37.352 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8407 bytes
+2025-09-16 18:03:37.445 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8333 bytes
+2025-09-16 18:03:37.537 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8341 bytes
+2025-09-16 18:03:37.626 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8306 bytes
+2025-09-16 18:03:37.718 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8376 bytes
+2025-09-16 18:03:37.823 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8350 bytes
+2025-09-16 18:03:37.919 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8339 bytes
+2025-09-16 18:03:38.023 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8362 bytes
+2025-09-16 18:03:38.115 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8343 bytes
+2025-09-16 18:03:38.212 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8357 bytes
+2025-09-16 18:03:38.307 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8355 bytes
+2025-09-16 18:03:38.405 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8340 bytes
+2025-09-16 18:03:38.528 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8381 bytes
+2025-09-16 18:03:38.648 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8373 bytes
+2025-09-16 18:03:38.747 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8364 bytes
+2025-09-16 18:03:38.843 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8370 bytes
+2025-09-16 18:03:38.942 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8368 bytes
+2025-09-16 18:03:39.040 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8412 bytes
+2025-09-16 18:03:39.125 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8416 bytes
+2025-09-16 18:03:39.224 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8411 bytes
+2025-09-16 18:03:39.313 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8293 bytes
+2025-09-16 18:03:39.403 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8363 bytes
+2025-09-16 18:03:39.495 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8414 bytes
+2025-09-16 18:03:39.587 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8353 bytes
+2025-09-16 18:03:39.821 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8394 bytes
+2025-09-16 18:03:40.086 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8383 bytes
+2025-09-16 18:03:40.329 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8362 bytes
+2025-09-16 18:03:40.552 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8357 bytes
+2025-09-16 18:03:40.774 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8361 bytes
+2025-09-16 18:03:41.018 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8324 bytes
+2025-09-16 18:03:41.240 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8348 bytes
+2025-09-16 18:03:41.471 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8378 bytes
+2025-09-16 18:03:41.693 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8353 bytes
+2025-09-16 18:03:41.915 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8665 bytes
+2025-09-16 18:03:42.273 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8827 bytes
+2025-09-16 18:03:42.515 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8826 bytes
+2025-09-16 18:03:42.753 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8837 bytes
+2025-09-16 18:03:42.974 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8908 bytes
+2025-09-16 18:03:43.203 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8902 bytes
+2025-09-16 18:03:43.447 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8600 bytes
+2025-09-16 18:03:43.692 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8627 bytes
+2025-09-16 18:03:43.924 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8631 bytes
+2025-09-16 18:03:44.184 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 8617 bytes
+2025-09-16 18:03:44.471 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8583 bytes
+2025-09-16 18:03:44.557 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8645 bytes
+2025-09-16 18:03:44.640 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8612 bytes
+2025-09-16 18:03:44.725 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8619 bytes
+2025-09-16 18:03:44.807 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8611 bytes
+2025-09-16 18:03:44.892 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8641 bytes
+2025-09-16 18:03:44.974 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8650 bytes
+2025-09-16 18:03:45.052 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8630 bytes
+2025-09-16 18:03:45.121 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8592 bytes
+2025-09-16 18:03:45.204 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8601 bytes
+2025-09-16 18:03:45.279 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8659 bytes
+2025-09-16 18:03:45.365 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8721 bytes
+2025-09-16 18:03:45.446 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8776 bytes
+2025-09-16 18:03:45.531 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8784 bytes
+2025-09-16 18:03:45.600 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8747 bytes
+2025-09-16 18:03:45.676 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8752 bytes
+2025-09-16 18:03:45.759 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8738 bytes
+2025-09-16 18:03:45.835 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8679 bytes
+2025-09-16 18:03:45.919 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8782 bytes
+2025-09-16 18:03:46.003 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8717 bytes
+2025-09-16 18:03:46.079 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8729 bytes
+2025-09-16 18:03:46.163 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8730 bytes
+2025-09-16 18:03:46.245 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8670 bytes
+2025-09-16 18:03:46.323 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8735 bytes
+2025-09-16 18:03:46.421 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8729 bytes
+2025-09-16 18:03:46.503 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8748 bytes
+2025-09-16 18:03:46.585 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8720 bytes
+2025-09-16 18:03:46.662 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8708 bytes
+2025-09-16 18:03:46.745 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8733 bytes
+2025-09-16 18:03:46.823 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8716 bytes
+2025-09-16 18:03:46.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8694 bytes
+2025-09-16 18:03:46.974 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8716 bytes
+2025-09-16 18:03:47.045 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8680 bytes
+2025-09-16 18:03:47.120 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8747 bytes
+2025-09-16 18:03:47.196 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8688 bytes
+2025-09-16 18:03:47.296 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8695 bytes
+2025-09-16 18:03:47.421 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8673 bytes
+2025-09-16 18:03:47.522 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8722 bytes
+2025-09-16 18:03:47.619 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8721 bytes
+2025-09-16 18:03:47.723 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8695 bytes
+2025-09-16 18:03:47.821 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8676 bytes
+2025-09-16 18:03:47.919 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8651 bytes
+2025-09-16 18:03:48.018 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8626 bytes
+2025-09-16 18:03:48.107 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8690 bytes
+2025-09-16 18:03:48.204 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8699 bytes
+2025-09-16 18:03:48.302 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8713 bytes
+2025-09-16 18:03:48.399 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8592 bytes
+2025-09-16 18:03:48.497 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8703 bytes
+2025-09-16 18:03:48.594 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8713 bytes
+2025-09-16 18:03:48.695 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8734 bytes
+2025-09-16 18:03:48.793 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8681 bytes
+2025-09-16 18:03:48.896 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8680 bytes
+2025-09-16 18:03:49.000 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8625 bytes
+2025-09-16 18:03:49.099 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8660 bytes
+2025-09-16 18:03:49.206 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8743 bytes
+2025-09-16 18:03:49.301 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8696 bytes
+2025-09-16 18:03:49.397 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8592 bytes
+2025-09-16 18:03:49.493 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8582 bytes
+2025-09-16 18:03:49.605 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8604 bytes
+2025-09-16 18:03:49.710 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8652 bytes
+2025-09-16 18:03:49.801 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8678 bytes
+2025-09-16 18:03:49.898 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8616 bytes
+2025-09-16 18:03:50.009 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8618 bytes
+2025-09-16 18:03:50.115 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8605 bytes
+2025-09-16 18:03:50.218 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8663 bytes
+2025-09-16 18:03:50.322 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8632 bytes
+2025-09-16 18:03:50.426 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8632 bytes
+2025-09-16 18:03:50.532 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8601 bytes
+2025-09-16 18:03:50.635 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8628 bytes
+2025-09-16 18:03:50.747 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8640 bytes
+2025-09-16 18:03:50.856 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8512 bytes
+2025-09-16 18:03:50.969 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8535 bytes
+2025-09-16 18:03:51.073 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8579 bytes
+2025-09-16 18:03:51.176 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8565 bytes
+2025-09-16 18:03:51.272 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8557 bytes
+2025-09-16 18:03:51.368 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8594 bytes
+2025-09-16 18:03:51.466 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8622 bytes
+2025-09-16 18:03:51.571 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8581 bytes
+2025-09-16 18:03:51.663 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8548 bytes
+2025-09-16 18:03:51.768 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8488 bytes
+2025-09-16 18:03:51.872 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8609 bytes
+2025-09-16 18:03:51.988 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8617 bytes
+2025-09-16 18:03:52.144 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8590 bytes
+2025-09-16 18:03:52.253 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8565 bytes
+2025-09-16 18:03:52.355 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8585 bytes
+2025-09-16 18:03:52.459 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8589 bytes
+2025-09-16 18:03:52.571 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8579 bytes
+2025-09-16 18:04:53.246 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38215 bytes
+2025-09-16 18:04:53.412 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37951 bytes
+2025-09-16 18:04:53.514 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38143 bytes
+2025-09-16 18:04:53.612 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38273 bytes
+2025-09-16 18:04:53.709 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38383 bytes
+2025-09-16 18:04:53.807 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38202 bytes
+2025-09-16 18:04:53.910 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38018 bytes
+2025-09-16 18:04:54.008 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38248 bytes
+2025-09-16 18:04:54.109 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38251 bytes
+2025-09-16 18:04:54.208 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38265 bytes
+2025-09-16 18:04:54.306 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38223 bytes
+2025-09-16 18:04:54.405 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38131 bytes
+2025-09-16 18:04:54.503 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38030 bytes
+2025-09-16 18:04:54.604 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38334 bytes
+2025-09-16 18:04:54.709 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38352 bytes
+2025-09-16 18:04:54.806 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38311 bytes
+2025-09-16 18:04:54.910 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38009 bytes
+2025-09-16 18:04:55.014 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38132 bytes
+2025-09-16 18:04:55.111 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38124 bytes
+2025-09-16 18:04:55.217 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38200 bytes
+2025-09-16 18:04:55.312 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38308 bytes
+2025-09-16 18:04:55.398 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38166 bytes
+2025-09-16 18:04:55.498 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38036 bytes
+2025-09-16 18:04:55.591 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37957 bytes
+2025-09-16 18:04:55.681 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37830 bytes
+2025-09-16 18:04:55.786 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38144 bytes
+2025-09-16 18:04:55.871 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37917 bytes
+2025-09-16 18:04:55.965 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38006 bytes
+2025-09-16 18:04:56.056 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37812 bytes
+2025-09-16 18:04:56.151 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37882 bytes
+2025-09-16 18:04:56.245 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38020 bytes
+2025-09-16 18:04:56.339 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38025 bytes
+2025-09-16 18:04:56.433 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37899 bytes
+2025-09-16 18:04:56.527 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38009 bytes
+2025-09-16 18:04:56.616 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37939 bytes
+2025-09-16 18:04:56.711 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38014 bytes
+2025-09-16 18:04:56.809 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38177 bytes
+2025-09-16 18:04:56.905 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38309 bytes
+2025-09-16 18:04:57.001 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38079 bytes
+2025-09-16 18:04:57.097 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37880 bytes
+2025-09-16 18:04:57.195 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38016 bytes
+2025-09-16 18:04:57.286 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38055 bytes
+2025-09-16 18:04:57.378 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38289 bytes
+2025-09-16 18:04:57.478 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37983 bytes
+2025-09-16 18:04:57.574 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37853 bytes
+2025-09-16 18:04:57.673 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37784 bytes
+2025-09-16 18:04:57.763 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37909 bytes
+2025-09-16 18:04:57.854 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37970 bytes
+2025-09-16 18:04:57.944 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37827 bytes
+2025-09-16 18:04:58.036 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37870 bytes
+2025-09-16 18:04:58.139 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37774 bytes
+2025-09-16 18:04:58.234 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37830 bytes
+2025-09-16 18:04:58.331 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37790 bytes
+2025-09-16 18:04:58.425 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38024 bytes
+2025-09-16 18:04:58.518 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38012 bytes
+2025-09-16 18:04:58.610 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37843 bytes
+2025-09-16 18:04:58.696 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37911 bytes
+2025-09-16 18:04:58.793 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37970 bytes
+2025-09-16 18:04:58.887 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38200 bytes
+2025-09-16 18:04:58.980 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38236 bytes
+2025-09-16 18:04:59.080 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37976 bytes
+2025-09-16 18:04:59.171 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38014 bytes
+2025-09-16 18:04:59.271 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38006 bytes
+2025-09-16 18:04:59.361 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38144 bytes
+2025-09-16 18:04:59.464 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38192 bytes
+2025-09-16 18:04:59.561 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38167 bytes
+2025-09-16 18:04:59.655 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37944 bytes
+2025-09-16 18:04:59.756 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37944 bytes
+2025-09-16 18:04:59.883 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38034 bytes
+2025-09-16 18:05:00.019 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37951 bytes
+2025-09-16 18:05:00.117 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37902 bytes
+2025-09-16 18:05:00.216 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37780 bytes
+2025-09-16 18:05:00.313 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37907 bytes
+2025-09-16 18:05:00.408 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38121 bytes
+2025-09-16 18:05:00.505 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38029 bytes
+2025-09-16 18:05:00.599 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37870 bytes
+2025-09-16 18:05:00.696 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37970 bytes
+2025-09-16 18:05:00.790 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37912 bytes
+2025-09-16 18:05:00.887 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38355 bytes
+2025-09-16 18:05:00.984 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38345 bytes
+2025-09-16 18:05:01.116 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38306 bytes
+2025-09-16 18:05:01.236 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38268 bytes
+2025-09-16 18:05:01.334 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38261 bytes
+2025-09-16 18:05:01.430 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38230 bytes
+2025-09-16 18:05:01.548 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38404 bytes
+2025-09-16 18:05:01.665 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38273 bytes
+2025-09-16 18:05:01.763 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38177 bytes
+2025-09-16 18:05:01.862 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38143 bytes
+2025-09-16 18:05:01.960 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38202 bytes
+2025-09-16 18:05:02.056 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38332 bytes
+2025-09-16 18:05:02.155 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38197 bytes
+2025-09-16 18:05:02.249 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37785 bytes
+2025-09-16 18:05:02.337 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37490 bytes
+2025-09-16 18:05:02.433 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37619 bytes
+2025-09-16 18:05:02.526 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37753 bytes
+2025-09-16 18:05:02.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37995 bytes
+2025-09-16 18:05:02.717 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37776 bytes
+2025-09-16 18:05:02.816 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37522 bytes
+2025-09-16 18:05:02.910 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37620 bytes
+2025-09-16 18:05:03.009 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37915 bytes
+2025-09-16 18:05:03.105 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37799 bytes
+2025-09-16 18:05:03.195 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37917 bytes
+2025-09-16 18:05:03.291 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37669 bytes
+2025-09-16 18:05:03.381 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37694 bytes
+2025-09-16 18:05:03.476 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37793 bytes
+2025-09-16 18:05:03.575 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37747 bytes
+2025-09-16 18:05:03.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37855 bytes
+2025-09-16 18:05:03.764 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37668 bytes
+2025-09-16 18:05:03.862 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37746 bytes
+2025-09-16 18:05:03.958 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37629 bytes
+2025-09-16 18:05:04.051 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37848 bytes
+2025-09-16 18:05:04.149 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37889 bytes
+2025-09-16 18:05:04.248 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37692 bytes
+2025-09-16 18:05:04.341 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37591 bytes
+2025-09-16 18:05:04.437 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37604 bytes
+2025-09-16 18:05:04.535 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37887 bytes
+2025-09-16 18:05:04.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37824 bytes
+2025-09-16 18:05:04.701 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37893 bytes
+2025-09-16 18:05:04.784 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37762 bytes
+2025-09-16 18:05:04.872 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37655 bytes
+2025-09-16 18:05:04.958 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37615 bytes
+2025-09-16 18:05:05.042 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37762 bytes
+2025-09-16 18:05:05.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38035 bytes
+2025-09-16 18:05:05.230 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37743 bytes
+2025-09-16 18:05:05.326 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37826 bytes
+2025-09-16 18:05:05.418 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37624 bytes
+2025-09-16 18:05:05.514 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37614 bytes
+2025-09-16 18:05:05.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37903 bytes
+2025-09-16 18:05:05.712 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37897 bytes
+2025-09-16 18:05:05.806 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37793 bytes
+2025-09-16 18:05:05.901 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37654 bytes
+2025-09-16 18:05:05.997 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37632 bytes
+2025-09-16 18:05:06.088 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37620 bytes
+2025-09-16 18:05:06.175 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37979 bytes
+2025-09-16 18:05:06.272 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37754 bytes
+2025-09-16 18:05:06.363 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37697 bytes
+2025-09-16 18:05:06.452 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37638 bytes
+2025-09-16 18:05:06.543 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37763 bytes
+2025-09-16 18:05:06.635 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37729 bytes
+2025-09-16 18:05:06.737 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37775 bytes
+2025-09-16 18:05:06.843 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37764 bytes
+2025-09-16 18:05:06.967 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37594 bytes
+2025-09-16 18:05:07.145 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37777 bytes
+2025-09-16 18:05:07.268 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37764 bytes
+2025-09-16 18:05:07.369 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37687 bytes
+2025-09-16 18:05:07.464 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37540 bytes
+2025-09-16 18:05:07.562 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37679 bytes
+2025-09-16 18:05:07.667 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37724 bytes
+2025-09-16 18:05:07.771 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37915 bytes
+2025-09-16 18:05:07.873 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37729 bytes
+2025-09-16 18:05:07.977 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37640 bytes
+2025-09-16 18:05:08.083 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37748 bytes
+2025-09-16 18:05:08.182 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37853 bytes
+2025-09-16 18:05:08.281 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37750 bytes
+2025-09-16 18:05:08.375 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37817 bytes
+2025-09-16 18:05:08.471 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37525 bytes
+2025-09-16 18:05:08.567 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37595 bytes
+2025-09-16 18:05:08.667 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38101 bytes
+2025-09-16 18:05:08.758 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38162 bytes
+2025-09-16 18:05:08.853 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38375 bytes
+2025-09-16 18:05:08.951 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38305 bytes
+2025-09-16 18:05:09.047 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38433 bytes
+2025-09-16 18:05:09.142 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38432 bytes
+2025-09-16 18:05:09.239 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38635 bytes
+2025-09-16 18:05:09.335 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38817 bytes
+2025-09-16 18:05:09.432 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38816 bytes
+2025-09-16 18:05:09.520 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38779 bytes
+2025-09-16 18:05:09.626 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38844 bytes
+2025-09-16 18:05:09.720 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38781 bytes
+2025-09-16 18:05:09.817 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38928 bytes
+2025-09-16 18:05:09.925 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39186 bytes
+2025-09-16 18:05:10.019 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38996 bytes
+2025-09-16 18:05:10.111 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38956 bytes
+2025-09-16 18:05:10.212 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38937 bytes
+2025-09-16 18:05:10.309 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39008 bytes
+2025-09-16 18:05:10.416 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39016 bytes
+2025-09-16 18:05:10.507 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39002 bytes
+2025-09-16 18:05:10.599 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38985 bytes
+2025-09-16 18:05:10.692 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38914 bytes
+2025-09-16 18:05:10.782 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38882 bytes
+2025-09-16 18:05:10.881 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38968 bytes
+2025-09-16 18:05:10.978 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39142 bytes
+2025-09-16 18:05:11.074 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38992 bytes
+2025-09-16 18:05:11.172 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38908 bytes
+2025-09-16 18:05:11.271 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38624 bytes
+2025-09-16 18:05:11.369 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38859 bytes
+2025-09-16 18:05:11.460 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39149 bytes
+2025-09-16 18:05:11.556 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38898 bytes
+2025-09-16 18:05:11.658 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38732 bytes
+2025-09-16 18:05:11.750 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38785 bytes
+2025-09-16 18:05:11.833 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38890 bytes
+2025-09-16 18:05:11.919 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38800 bytes
+2025-09-16 18:05:12.008 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38952 bytes
+2025-09-16 18:05:12.095 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38916 bytes
+2025-09-16 18:05:12.173 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38668 bytes
+2025-09-16 18:05:12.260 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38718 bytes
+2025-09-16 18:05:12.348 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38913 bytes
+2025-09-16 18:05:12.440 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38924 bytes
+2025-09-16 18:05:12.527 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39133 bytes
+2025-09-16 18:05:12.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38910 bytes
+2025-09-16 18:05:12.710 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38719 bytes
+2025-09-16 18:05:12.793 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38686 bytes
+2025-09-16 18:05:12.877 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38889 bytes
+2025-09-16 18:05:12.966 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38848 bytes
+2025-09-16 18:05:13.050 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38964 bytes
+2025-09-16 18:05:13.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38822 bytes
+2025-09-16 18:05:13.229 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38768 bytes
+2025-09-16 18:05:13.321 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38756 bytes
+2025-09-16 18:05:13.412 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38932 bytes
+2025-09-16 18:05:13.499 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39006 bytes
+2025-09-16 18:05:13.591 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38796 bytes
+2025-09-16 18:05:13.672 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38875 bytes
+2025-09-16 18:05:13.751 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38775 bytes
+2025-09-16 18:05:13.827 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38835 bytes
+2025-09-16 18:05:13.916 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38923 bytes
+2025-09-16 18:05:14.013 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38897 bytes
+2025-09-16 18:05:14.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38938 bytes
+2025-09-16 18:05:14.230 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38777 bytes
+2025-09-16 18:05:14.321 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38846 bytes
+2025-09-16 18:05:14.402 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38941 bytes
+2025-09-16 18:05:14.489 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38944 bytes
+2025-09-16 18:05:14.577 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38942 bytes
+2025-09-16 18:05:14.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39025 bytes
+2025-09-16 18:05:14.759 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39001 bytes
+2025-09-16 18:05:14.856 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38861 bytes
+2025-09-16 18:05:14.943 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38696 bytes
+2025-09-16 18:05:15.029 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38785 bytes
+2025-09-16 18:05:15.115 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38727 bytes
+2025-09-16 18:05:15.201 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38621 bytes
+2025-09-16 18:05:15.283 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38391 bytes
+2025-09-16 18:05:15.375 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38047 bytes
+2025-09-16 18:05:15.471 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37875 bytes
+2025-09-16 18:05:15.556 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38303 bytes
+2025-09-16 18:05:15.644 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38236 bytes
+2025-09-16 18:05:15.736 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38096 bytes
+2025-09-16 18:05:15.835 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37907 bytes
+2025-09-16 18:05:15.917 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37870 bytes
+2025-09-16 18:05:16.001 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38020 bytes
+2025-09-16 18:05:16.088 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38084 bytes
+2025-09-16 18:05:16.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37996 bytes
+2025-09-16 18:05:16.286 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38019 bytes
+2025-09-16 18:05:16.368 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37877 bytes
+2025-09-16 18:05:16.453 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37766 bytes
+2025-09-16 18:05:16.539 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38011 bytes
+2025-09-16 18:05:16.615 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37983 bytes
+2025-09-16 18:05:16.692 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38238 bytes
+2025-09-16 18:05:16.777 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38347 bytes
+2025-09-16 18:05:16.861 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37820 bytes
+2025-09-16 18:05:16.951 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37929 bytes
+2025-09-16 18:05:17.033 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37920 bytes
+2025-09-16 18:05:17.123 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37892 bytes
+2025-09-16 18:05:17.218 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38130 bytes
+2025-09-16 18:05:17.304 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37997 bytes
+2025-09-16 18:05:17.388 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37881 bytes
+2025-09-16 18:05:17.476 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 37932 bytes
+2025-09-16 18:05:17.574 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38041 bytes
+2025-09-16 18:05:17.659 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38165 bytes
+2025-09-16 18:05:17.746 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38180 bytes
+2025-09-16 18:05:17.832 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38169 bytes
+2025-09-16 18:05:17.910 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38020 bytes
+2025-09-16 18:05:17.993 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38078 bytes
+2025-09-16 18:05:18.088 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38042 bytes
+2025-09-16 18:05:18.201 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38136 bytes
+2025-09-16 18:05:18.331 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38088 bytes
+2025-09-16 18:05:18.426 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38880 bytes
+2025-09-16 18:05:18.526 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39320 bytes
+2025-09-16 18:05:18.623 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38746 bytes
+2025-09-16 18:05:18.721 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39296 bytes
+2025-09-16 18:05:18.827 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39383 bytes
+2025-09-16 18:05:18.926 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39433 bytes
+2025-09-16 18:05:19.028 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39289 bytes
+2025-09-16 18:05:19.126 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39435 bytes
+2025-09-16 18:05:19.221 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39424 bytes
+2025-09-16 18:05:19.309 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39643 bytes
+2025-09-16 18:05:19.405 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39317 bytes
+2025-09-16 18:05:19.495 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39144 bytes
+2025-09-16 18:05:19.583 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39232 bytes
+2025-09-16 18:05:19.681 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39297 bytes
+2025-09-16 18:05:19.792 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39715 bytes
+2025-09-16 18:05:19.881 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39332 bytes
+2025-09-16 18:05:19.975 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39564 bytes
+2025-09-16 18:05:20.066 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39305 bytes
+2025-09-16 18:05:20.153 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39274 bytes
+2025-09-16 18:05:20.246 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39429 bytes
+2025-09-16 18:05:20.335 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39340 bytes
+2025-09-16 18:05:20.427 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39413 bytes
+2025-09-16 18:05:20.547 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39354 bytes
+2025-09-16 18:05:20.674 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39316 bytes
+2025-09-16 18:05:20.779 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39284 bytes
+2025-09-16 18:05:20.885 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39365 bytes
+2025-09-16 18:05:20.982 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39448 bytes
+2025-09-16 18:05:21.087 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39095 bytes
+2025-09-16 18:05:21.198 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39332 bytes
+2025-09-16 18:05:21.287 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39397 bytes
+2025-09-16 18:05:22.987 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39220 bytes
+2025-09-16 18:05:23.118 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39336 bytes
+2025-09-16 18:05:23.236 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39611 bytes
+2025-09-16 18:05:23.335 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39779 bytes
+2025-09-16 18:05:23.425 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39499 bytes
+2025-09-16 18:05:23.514 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39366 bytes
+2025-09-16 18:05:23.603 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39463 bytes
+2025-09-16 18:05:23.695 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39584 bytes
+2025-09-16 18:05:23.791 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39478 bytes
+2025-09-16 18:05:23.915 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39604 bytes
+2025-09-16 18:05:24.007 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39392 bytes
+2025-09-16 18:05:24.099 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39482 bytes
+2025-09-16 18:05:24.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39514 bytes
+2025-09-16 18:05:24.279 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39528 bytes
+2025-09-16 18:05:24.369 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39577 bytes
+2025-09-16 18:05:24.459 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39439 bytes
+2025-09-16 18:05:24.550 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39116 bytes
+2025-09-16 18:05:24.638 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39000 bytes
+2025-09-16 18:05:24.736 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39197 bytes
+2025-09-16 18:05:24.825 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39283 bytes
+2025-09-16 18:05:24.912 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38917 bytes
+2025-09-16 18:05:25.000 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38930 bytes
+2025-09-16 18:05:25.090 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38682 bytes
+2025-09-16 18:05:25.178 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38984 bytes
+2025-09-16 18:05:25.263 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39210 bytes
+2025-09-16 18:05:25.350 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39195 bytes
+2025-09-16 18:05:25.436 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38908 bytes
+2025-09-16 18:05:25.528 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38879 bytes
+2025-09-16 18:05:25.611 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38919 bytes
+2025-09-16 18:05:25.717 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38750 bytes
+2025-09-16 18:05:25.813 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38967 bytes
+2025-09-16 18:05:25.914 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39050 bytes
+2025-09-16 18:05:26.002 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 39094 bytes
+2025-09-16 18:05:26.106 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38878 bytes
+2025-09-16 18:05:26.216 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 38930 bytes
+2025-09-16 18:07:15.014 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8331 bytes
+2025-09-16 18:07:15.128 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8348 bytes
+2025-09-16 18:07:15.221 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8422 bytes
+2025-09-16 18:07:15.332 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8407 bytes
+2025-09-16 18:07:15.437 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8413 bytes
+2025-09-16 18:07:15.535 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8419 bytes
+2025-09-16 18:07:15.643 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8448 bytes
+2025-09-16 18:07:15.736 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8438 bytes
+2025-09-16 18:07:15.839 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8409 bytes
+2025-09-16 18:07:15.942 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8366 bytes
+2025-09-16 18:07:16.045 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8400 bytes
+2025-09-16 18:07:16.136 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8457 bytes
+2025-09-16 18:07:16.227 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8420 bytes
+2025-09-16 18:07:16.326 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8482 bytes
+2025-09-16 18:07:16.428 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8426 bytes
+2025-09-16 18:07:16.526 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8430 bytes
+2025-09-16 18:07:16.630 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8408 bytes
+2025-09-16 18:07:16.720 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8425 bytes
+2025-09-16 18:07:16.826 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8459 bytes
+2025-09-16 18:07:16.922 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8427 bytes
+2025-09-16 18:07:17.012 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8459 bytes
+2025-09-16 18:07:17.108 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8432 bytes
+2025-09-16 18:07:17.208 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8455 bytes
+2025-09-16 18:07:17.311 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8468 bytes
+2025-09-16 18:07:17.423 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8450 bytes
+2025-09-16 18:07:17.520 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8401 bytes
+2025-09-16 18:07:17.697 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8415 bytes
+2025-09-16 18:07:17.799 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8433 bytes
+2025-09-16 18:07:17.895 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8385 bytes
+2025-09-16 18:07:17.991 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8374 bytes
+2025-09-16 18:07:18.082 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8394 bytes
+2025-09-16 18:07:18.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8425 bytes
+2025-09-16 18:07:18.297 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8404 bytes
+2025-09-16 18:07:18.400 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8428 bytes
+2025-09-16 18:07:18.506 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8362 bytes
+2025-09-16 18:07:18.612 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8402 bytes
+2025-09-16 18:07:18.731 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8425 bytes
+2025-09-16 18:07:18.830 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8442 bytes
+2025-09-16 18:07:18.936 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8419 bytes
+2025-09-16 18:07:19.046 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8410 bytes
+2025-09-16 18:07:19.147 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8367 bytes
+2025-09-16 18:07:19.254 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8415 bytes
+2025-09-16 18:07:19.352 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8380 bytes
+2025-09-16 18:07:19.454 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8364 bytes
+2025-09-16 18:07:19.555 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8355 bytes
+2025-09-16 18:07:19.659 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8351 bytes
+2025-09-16 18:08:27.950 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8313 bytes
+2025-09-16 18:08:28.072 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8264 bytes
+2025-09-16 18:08:28.172 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8238 bytes
+2025-09-16 18:08:28.276 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8246 bytes
+2025-09-16 18:08:28.372 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8244 bytes
+2025-09-16 18:08:28.470 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8253 bytes
+2025-09-16 18:08:28.574 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8288 bytes
+2025-09-16 18:08:28.670 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8286 bytes
+2025-09-16 18:08:28.769 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8232 bytes
+2025-09-16 18:08:28.864 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8262 bytes
+2025-09-16 18:08:28.957 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8263 bytes
+2025-09-16 18:08:29.060 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8322 bytes
+2025-09-16 18:08:29.150 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8285 bytes
+2025-09-16 18:08:29.256 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8281 bytes
+2025-09-16 18:08:29.367 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8279 bytes
+2025-09-16 18:08:29.460 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8284 bytes
+2025-09-16 18:08:29.552 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8357 bytes
+2025-09-16 18:08:29.648 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8286 bytes
+2025-09-16 18:08:29.753 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8272 bytes
+2025-09-16 18:08:29.843 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8361 bytes
+2025-09-16 18:08:29.941 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8284 bytes
+2025-09-16 18:08:30.010 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8326 bytes
+2025-09-16 18:08:30.085 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8307 bytes
+2025-09-16 18:08:30.157 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8323 bytes
+2025-09-16 18:08:30.235 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8266 bytes
+2025-09-16 18:08:30.309 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8301 bytes
+2025-09-16 18:08:30.381 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8243 bytes
+2025-09-16 18:08:30.457 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8288 bytes
+2025-09-16 18:08:30.536 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8298 bytes
+2025-09-16 18:08:30.621 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8254 bytes
+2025-09-16 18:08:30.698 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8313 bytes
+2025-09-16 18:08:30.777 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 8239 bytes
+2025-09-16 18:08:30.862 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8204 bytes
+2025-09-16 18:08:30.926 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8330 bytes
+2025-09-16 18:08:30.993 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8269 bytes
+2025-09-16 18:08:31.058 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8292 bytes
+2025-09-16 18:08:31.126 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8292 bytes
+2025-09-16 18:08:31.184 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8262 bytes
+2025-09-16 18:08:31.247 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8231 bytes
+2025-09-16 18:08:31.311 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8284 bytes
+2025-09-16 18:08:31.370 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8263 bytes
+2025-09-16 18:08:31.430 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8277 bytes
+2025-09-16 18:08:31.488 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8294 bytes
+2025-09-16 18:08:31.550 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8280 bytes
+2025-09-16 18:08:31.618 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8283 bytes
+2025-09-16 18:08:31.684 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8278 bytes
+2025-09-16 18:08:31.745 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8259 bytes
+2025-09-16 18:08:31.806 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8319 bytes
+2025-09-16 18:08:31.871 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8300 bytes
+2025-09-16 18:08:31.938 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8266 bytes
+2025-09-16 18:08:32.002 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8282 bytes
+2025-09-16 18:08:32.063 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8279 bytes
+2025-09-16 18:08:32.124 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8287 bytes
+2025-09-16 18:08:32.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8256 bytes
+2025-09-16 18:08:32.246 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8261 bytes
+2025-09-16 18:08:32.317 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8278 bytes
+2025-09-16 18:08:32.387 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8268 bytes
+2025-09-16 18:08:32.453 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8250 bytes
+2025-09-16 18:08:32.515 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8282 bytes
+2025-09-16 18:08:32.573 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 8317 bytes
+2025-09-16 18:08:32.643 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8267 bytes
+2025-09-16 18:08:32.738 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8228 bytes
+2025-09-16 18:08:32.824 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8278 bytes
+2025-09-16 18:08:32.911 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8265 bytes
+2025-09-16 18:08:32.997 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8282 bytes
+2025-09-16 18:08:33.092 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8309 bytes
+2025-09-16 18:08:33.183 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8307 bytes
+2025-09-16 18:08:33.283 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8259 bytes
+2025-09-16 18:08:33.373 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8230 bytes
+2025-09-16 18:08:33.455 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8231 bytes
+2025-09-16 18:08:33.543 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8280 bytes
+2025-09-16 18:08:33.625 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8291 bytes
+2025-09-16 18:08:33.714 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8299 bytes
+2025-09-16 18:08:33.798 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8304 bytes
+2025-09-16 18:08:33.879 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8341 bytes
+2025-09-16 18:08:33.962 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8311 bytes
+2025-09-16 18:08:34.043 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8255 bytes
+2025-09-16 18:08:34.128 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8297 bytes
+2025-09-16 18:08:34.209 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8295 bytes
+2025-09-16 18:08:34.302 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8336 bytes
+2025-09-16 18:08:34.396 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8291 bytes
+2025-09-16 18:08:34.484 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8256 bytes
+2025-09-16 18:08:34.567 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8273 bytes
+2025-09-16 18:08:34.656 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8384 bytes
+2025-09-16 18:08:34.744 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8335 bytes
+2025-09-16 18:08:34.829 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8346 bytes
+2025-09-16 18:08:34.919 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8313 bytes
+2025-09-16 18:08:35.005 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8398 bytes
+2025-09-16 18:08:35.092 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8410 bytes
+2025-09-16 18:08:35.188 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8522 bytes
+2025-09-16 18:08:35.273 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8391 bytes
+2025-09-16 18:08:35.358 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8474 bytes
+2025-09-16 18:08:35.447 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8406 bytes
+2025-09-16 18:08:35.533 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8374 bytes
+2025-09-16 18:08:35.622 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8554 bytes
+2025-09-16 18:08:35.711 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8452 bytes
+2025-09-16 18:08:35.799 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8372 bytes
+2025-09-16 18:08:35.885 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8288 bytes
+2025-09-16 18:08:35.976 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8255 bytes
+2025-09-16 18:08:36.065 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8218 bytes
+2025-09-16 18:08:36.152 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8229 bytes
+2025-09-16 18:08:36.245 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8275 bytes
+2025-09-16 18:08:36.335 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8310 bytes
+2025-09-16 18:08:36.424 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8233 bytes
+2025-09-16 18:08:36.507 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8237 bytes
+2025-09-16 18:08:36.600 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8226 bytes
+2025-09-16 18:08:36.684 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8288 bytes
+2025-09-16 18:08:36.771 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8268 bytes
+2025-09-16 18:08:36.862 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8254 bytes
+2025-09-16 18:08:36.952 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8280 bytes
+2025-09-16 18:08:37.037 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8257 bytes
+2025-09-16 18:08:37.121 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8206 bytes
+2025-09-16 18:08:37.194 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8278 bytes
+2025-09-16 18:08:37.266 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8262 bytes
+2025-09-16 18:08:37.357 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8276 bytes
+2025-09-16 18:08:37.455 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8241 bytes
+2025-09-16 18:08:37.550 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8244 bytes
+2025-09-16 18:08:37.646 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8230 bytes
+2025-09-16 18:08:37.737 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8260 bytes
+2025-09-16 18:08:37.826 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8229 bytes
+2025-09-16 18:08:37.913 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8274 bytes
+2025-09-16 18:08:38.007 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8252 bytes
+2025-09-16 18:08:38.092 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8238 bytes
+2025-09-16 18:08:38.180 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8222 bytes
+2025-09-16 18:08:38.269 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8243 bytes
+2025-09-16 18:08:38.379 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8269 bytes
+2025-09-16 18:08:38.497 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8291 bytes
+2025-09-16 18:08:38.583 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8268 bytes
+2025-09-16 18:08:38.673 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8222 bytes
+2025-09-16 18:08:38.765 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8257 bytes
+2025-09-16 18:08:38.879 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 8281 bytes
+2025-09-16 18:14:33.873 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded detect model
+2025-09-16 18:14:34.134 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up detect model
+2025-09-16 18:14:34.135 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading segment model from models/weights/yolo11n-seg.pt
+2025-09-16 18:14:34.259 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded segment model
+2025-09-16 18:14:34.442 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up segment model
+2025-09-16 18:14:34.443 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading classify model from models/weights/yolo11n-cls.pt
+2025-09-16 18:14:35.718 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded classify model
+2025-09-16 18:14:35.782 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up classify model
+2025-09-16 18:14:35.783 | INFO     | apps.web.glosentra.core.model_registry:_load_model:73 - Loading pose model from models/weights/yolo11n-pose.pt
+2025-09-16 18:14:35.922 | INFO     | apps.web.glosentra.core.model_registry:_load_model:76 - Successfully loaded pose model
+2025-09-16 18:14:36.071 | INFO     | apps.web.glosentra.core.model_registry:preload_models:104 - Warmed up pose model
+2025-09-16 18:14:36.071 | INFO     | apps.web.glosentra:_preload:57 - Model preload completed
+2025-09-16 18:16:15.789 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:16:17.908 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:16:19.984 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:16:20.041 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:16:57.935 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:17:00.076 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:17:02.190 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:17:02.191 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:21:11.138 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:21:13.247 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:21:15.323 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:21:15.323 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:22:23.221 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:22:25.507 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:22:27.728 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:22:27.729 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:23:45.022 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:23:47.356 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:23:49.536 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:23:49.537 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:25:28.180 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:25:30.441 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 823 bytes
+2025-09-16 18:25:32.640 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 12 bytes
+2025-09-16 18:25:32.641 | ERROR    | apps.web.glosentra.core.inference:run_inference:70 - Inference failed for detect: Failed to decode image
+2025-09-16 18:25:52.438 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 823 bytes
+2025-09-16 18:26:34.494 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing detect inference for 1726708 bytes
+2025-09-16 18:26:54.911 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing classify inference for 1726708 bytes
+2025-09-16 18:27:00.746 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing pose inference for 1726708 bytes
+2025-09-16 18:27:02.953 | INFO     | apps.web.glosentra.routes.api:process_image:98 - Processing segment inference for 1726708 bytes

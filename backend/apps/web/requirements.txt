@@ -1,0 +1,13 @@
+Flask>=3.0
+Flask-Cors>=4.0
+Flask-Compress>=1.15
+Flask-Caching>=2.3
+ultralytics>=8.3
+opencv-python-headless>=4.10
+pillow>=10.3
+numpy>=1.26
+chromadb>=0.5
+loguru>=0.7
+waitress>=3.0
+gunicorn>=22.0
+python-dotenv>=1.0

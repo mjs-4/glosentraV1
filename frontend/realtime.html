@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Real-time Inference - Glosentra</title>
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg0: "#0b1120",
+                        bg1: "#111827",
+                        glass: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.10)",
+                        text: "#e5e7eb",
+                        muted: "#9ca3af",
+                        primary: "#8b5cf6",
+                        primary600: "#7c3aed",
+                        accent: "#f472b6",
+                        success: "#10b981",
+                        warning: "#f59e0b",
+                        info: "#3b82f6"
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+        </script>
+
+        <!-- Custom Theme CSS -->
+        <link rel="stylesheet" href="apps/web/glosentra/static/css/theme.css">
+        <!-- API Config for backend base URL -->
+        <script src="static/js/config.js"></script>
+    </head>
+    <body
+        class="h-full bg-gradient-to-br from-bg0 via-bg1 to-bg0 text-text font-sans">
+        <!-- Background Pattern -->
+        <div class="fixed inset-0 opacity-20 pointer-events-none">
+            <div
+                class="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 50%)"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav
+            class="relative z-50 sticky top-0 bg-bg1/80 backdrop-blur-xl border-b border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Glosentra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="deploy_detect.html" class="nav-link">Deploy</a>
+                        <a href="realtime.html"
+                            class="nav-link active">Real-time</a>
+                        <a href="about.html" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="relative z-10">
+            <section class="py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold text-text mb-4">Real-time
+                            Inference</h1>
+                        <p class="text-xl text-muted max-w-3xl mx-auto">
+                            Process live video streams with real-time computer
+                            vision.
+                            Perfect for surveillance, monitoring, and
+                            interactive applications.
+                        </p>
+                        <div class="flex justify-center space-x-2 mt-6">
+                            <span class="badge badge-primary">Live Stream</span>
+                            <span class="badge badge-success">Real-time</span>
+                            <span class="badge badge-info">Webcam Support</span>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <!-- Video Preview -->
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <h3
+                                    class="text-lg font-semibold text-text mb-4">Live
+                                    Preview</h3>
+                                <div class="space-y-4">
+                                    <!-- Video Element -->
+                                    <div
+                                        class="relative bg-glass border border-border rounded-xl overflow-hidden">
+                                        <video id="videoPreview"
+                                            class="w-full h-64 object-cover"
+                                            autoplay muted playsinline></video>
+                                        <canvas id="overlayCanvas"
+                                            class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+
+                                        <!-- HUD overlay for inline results -->
+                                        <div id="hudOverlay"
+                                            class="absolute top-2 left-2 bg-bg0/70 backdrop-blur-sm border border-border rounded-md p-2 text-xs text-text hidden max-w-[75%]">
+                                            <div
+                                                class="font-semibold mb-1">Results</div>
+                                            <div id="hudContent"
+                                                class="space-y-1"></div>
+                                        </div>
+
+                                        <!-- Loading overlay -->
+                                        <div id="loadingOverlay"
+                                            class="absolute inset-0 bg-bg0/80 flex items-center justify-center">
+                                            <div class="text-center">
+                                                <div
+                                                    class="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                                                <p
+                                                    class="text-sm text-text">Starting
+                                                    camera...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controls -->
+                                    <div
+                                        class="flex items-center justify-between">
+                                        <div
+                                            class="flex items-center space-x-4">
+                                            <button id="startBtn"
+                                                onclick="startCamera()"
+                                                class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-success to-success/80 text-white rounded-lg hover:shadow-lg transition-all">
+                                                <svg class="w-4 h-4 mr-2"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                Start Camera
+                                            </button>
+
+                                            <button id="stopBtn"
+                                                onclick="stopCamera()" disabled
+                                                class="inline-flex items-center px-4 py-2 bg-glass border border-border text-text rounded-lg hover:bg-glass/80 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                                                <svg class="w-4 h-4 mr-2"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                Stop Camera
+                                            </button>
+                                        </div>
+
+                                        <div
+                                            class="flex items-center space-x-2">
+                                            <label
+                                                class="text-sm text-text">Model:</label>
+                                            <select id="modelSelect"
+                                                class="bg-glass border border-border rounded px-2 py-1 text-text text-sm">
+                                                <option value="detect">Object
+                                                    Detection</option>
+                                                <option
+                                                    value="segment">Segmentation</option>
+                                                <option
+                                                    value="classify">Classification</option>
+                                                <option value="pose">Pose
+                                                    Estimation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Status -->
+                                    <div
+                                        class="flex items-center justify-between text-sm">
+                                        <div
+                                            class="flex items-center space-x-4">
+                                            <div
+                                                class="flex items-center space-x-2">
+                                                <div id="statusIndicator"
+                                                    class="w-2 h-2 bg-muted rounded-full"></div>
+                                                <span id="statusText"
+                                                    class="text-muted">Camera
+                                                    stopped</span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-center space-x-4">
+                                            <span class="text-muted">FPS: <span
+                                                    id="fpsCounter">--</span></span>
+                                            <span class="text-muted">Latency:
+                                                <span
+                                                    id="latencyCounter">--</span>ms</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Panel -->
+                        <div
+                            class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                            <div class="relative">
+                                <h3
+                                    class="text-lg font-semibold text-text mb-4">Detection
+                                    Results</h3>
+                                <div class="space-y-4">
+                                    <!-- Current Detection Count -->
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div
+                                            class="bg-glass border border-border rounded-lg p-4 text-center">
+                                            <div id="detectionCount"
+                                                class="text-2xl font-bold text-primary">0</div>
+                                            <div
+                                                class="text-sm text-muted">Objects
+                                                Detected</div>
+                                        </div>
+                                        <div
+                                            class="bg-glass border border-border rounded-lg p-4 text-center">
+                                            <div id="confidenceAvg"
+                                                class="text-2xl font-bold text-success">0%</div>
+                                            <div class="text-sm text-muted">Avg
+                                                Confidence</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Detection List -->
+                                    <div>
+                                        <h4
+                                            class="text-sm font-medium text-text mb-3">Current
+                                            Detections</h4>
+                                        <div id="detectionList"
+                                            class="space-y-2 max-h-64 overflow-y-auto">
+                                            <div
+                                                class="text-center py-8 text-muted">
+                                                <svg
+                                                    class="w-8 h-8 mx-auto mb-2 opacity-50"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                </svg>
+                                                <p class="text-sm">Start camera
+                                                    to see detections</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Settings -->
+                                    <div class="border-t border-border pt-4">
+                                        <h4
+                                            class="text-sm font-medium text-text mb-3">Detection
+                                            Settings</h4>
+                                        <div class="space-y-3">
+                                            <div>
+                                                <label
+                                                    class="text-xs text-muted block mb-1">Confidence
+                                                    Threshold</label>
+                                                <input type="range"
+                                                    id="confidenceSlider"
+                                                    min="0.1" max="0.9"
+                                                    step="0.1" value="0.25"
+                                                    class="w-full h-2 bg-glass rounded-lg appearance-none cursor-pointer">
+                                                <div
+                                                    class="flex justify-between text-xs text-muted mt-1">
+                                                    <span>0.1</span>
+                                                    <span
+                                                        id="confidenceValue">0.25</span>
+                                                    <span>0.9</span>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="flex items-center space-x-2">
+                                                <input type="checkbox"
+                                                    id="showLabels" checked
+                                                    class="rounded">
+                                                <label for="showLabels"
+                                                    class="text-sm text-text">Show
+                                                    labels</label>
+                                            </div>
+
+                                            <div
+                                                class="flex items-center space-x-2">
+                                                <input type="checkbox"
+                                                    id="showConfidence" checked
+                                                    class="rounded">
+                                                <label for="showConfidence"
+                                                    class="text-sm text-text">Show
+                                                    confidence</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Metrics -->
+                    <div
+                        class="bg-glass border border-border rounded-2xl p-6 shadow-lg backdrop-blur-xl relative overflow-hidden mt-8">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
+                        <div class="relative">
+                            <h3
+                                class="text-lg font-semibold text-text mb-4">Performance
+                                Metrics</h3>
+                            <div class="grid md:grid-cols-4 gap-6">
+                                <div class="text-center">
+                                    <div id="avgFps"
+                                        class="text-2xl font-bold text-success">--</div>
+                                    <div class="text-sm text-muted">Average
+                                        FPS</div>
+                                </div>
+                                <div class="text-center">
+                                    <div id="avgLatency"
+                                        class="text-2xl font-bold text-info">--</div>
+                                    <div class="text-sm text-muted">Average
+                                        Latency</div>
+                                </div>
+                                <div class="text-center">
+                                    <div id="totalFrames"
+                                        class="text-2xl font-bold text-primary">0</div>
+                                    <div class="text-sm text-muted">Frames
+                                        Processed</div>
+                                </div>
+                                <div class="text-center">
+                                    <div id="totalDetections"
+                                        class="text-2xl font-bold text-warning">0</div>
+                                    <div class="text-sm text-muted">Total
+                                        Detections</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="relative z-10 border-t border-border bg-bg1/50 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="text-center text-muted text-sm">
+                    <p>&copy; 2024 Glosentra. Advanced Computer Vision
+                        Platform.</p>
+                    <p class="mt-2">Built with Ultralytics YOLO and Flask.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            let video = document.getElementById('videoPreview');
+            let canvas = document.getElementById('overlayCanvas');
+            let ctx = canvas.getContext('2d');
+            let stream = null;
+            let isRunning = false;
+            let fpsCounter = 0;
+            let latencySum = 0;
+            let frameCount = 0;
+            let detectionCount = 0;
+            
+            // Performance tracking
+            let performanceMetrics = {
+                fps: [],
+                latency: [],
+                totalFrames: 0,
+                totalDetections: 0
+            };
+            
+            // Update confidence display
+            document.getElementById('confidenceSlider').addEventListener('input', function(e) {
+                document.getElementById('confidenceValue').textContent = e.target.value;
+            });
+            
+            async function startCamera() {
+                // Guard: getUserMedia requires HTTPS or localhost
+                const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+                const isSecureContext = location.protocol === 'https:';
+                if (!isLocalhost && !isSecureContext) {
+                    document.getElementById('statusIndicator').className = 'w-2 h-2 bg-warning rounded-full';
+                    document.getElementById('statusText').textContent = 'Blocked: use HTTPS or localhost for camera access';
+                    alert('Camera access is blocked by the browser. Please open the site via https:// or http://localhost to use the webcam.');
+                    return;
+                }
+                try {
+                    document.getElementById('loadingOverlay').classList.remove('hidden');
+                    document.getElementById('statusIndicator').className = 'w-2 h-2 bg-warning rounded-full animate-pulse';
+                    document.getElementById('statusText').textContent = 'Starting camera...';
+                    
+                    // Prefer available cameras with reasonable defaults
+                    const constraints = {
+                        video: {
+                            width: { ideal: 640 },
+                            height: { ideal: 480 }
+                        },
+                        audio: false
+                    };
+
+                    // Try to select a camera if multiple are present
+                    try {
+                        const devices = await navigator.mediaDevices.enumerateDevices();
+                        const videoInputs = devices.filter(d => d.kind === 'videoinput');
+                        if (videoInputs.length === 0) {
+                            throw new Error('No camera detected');
+                        }
+                        // If only one camera, let the browser pick it; if multiple, prefer the first
+                        if (videoInputs.length > 0 && videoInputs[0].deviceId) {
+                            constraints.video.deviceId = { ideal: videoInputs[0].deviceId };
+                        }
+                    } catch (e) {
+                        // Fallback to generic video if enumerateDevices fails
+                        console.warn('Device enumeration failed, continuing with generic constraints', e);
+                    }
+                    
+                    // Attempt to get media stream; if it fails, retry with very generic constraints
+                    try {
+                        stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    } catch (err) {
+                        console.warn('getUserMedia failed with specific constraints, retrying with generic video=true', err);
+                        stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+                    }
+                    
+                    video.srcObject = stream;
+                    try {
+                        await video.play();
+                    } catch (e) {
+                        console.warn('Video play was interrupted by autoplay policy, waiting for user interaction.', e);
+                    }
+                    
+                    // Set canvas size to match video
+                    video.addEventListener('loadedmetadata', () => {
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                    });
+                    // Ensure we only hide the overlay once the video can render frames
+                    let overlayHidden = false;
+                    const hideOverlay = () => {
+                        if (!overlayHidden) {
+                            document.getElementById('loadingOverlay').classList.add('hidden');
+                            overlayHidden = true;
+                        }
+                    };
+                    video.addEventListener('canplay', hideOverlay, { once: true });
+                    // Fallback: hide overlay after 2 seconds if video has current data
+                    setTimeout(() => {
+                        if (video.readyState >= 2) { // HAVE_CURRENT_DATA
+                            hideOverlay();
+                        }
+                    }, 2000);
+                    
+                    document.getElementById('startBtn').disabled = true;
+                    document.getElementById('stopBtn').disabled = false;
+                    document.getElementById('statusIndicator').className = 'w-2 h-2 bg-success rounded-full';
+                    document.getElementById('statusText').textContent = `Camera active (${location.protocol}//${location.host})`;
+                    
+                    // Start processing loop
+                    isRunning = true;
+                    processFrame();
+                    
+                } catch (error) {
+                    console.error('Error accessing camera:', error);
+                    document.getElementById('loadingOverlay').classList.add('hidden');
+                    document.getElementById('statusIndicator').className = 'w-2 h-2 bg-warning rounded-full';
+                    document.getElementById('statusText').textContent = error && error.message ? error.message : 'Camera error';
+                    const message = (error && error.name === 'NotAllowedError') ?
+                        'Permission denied. Allow camera access in your browser settings.' :
+                        (error && error.message === 'No camera detected') ?
+                        'No camera detected. Please connect a webcam and try again.' :
+                        'Could not access camera. Please check permissions and device connections.';
+                    alert(message);
+                }
+            }
+            
+            function stopCamera() {
+                if (stream) {
+                    stream.getTracks().forEach(track => track.stop());
+                    stream = null;
+                }
+                
+                isRunning = false;
+                video.srcObject = null;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                document.getElementById('startBtn').disabled = false;
+                document.getElementById('stopBtn').disabled = true;
+                document.getElementById('statusIndicator').className = 'w-2 h-2 bg-muted rounded-full';
+                document.getElementById('statusText').textContent = 'Camera stopped';
+                const hud = document.getElementById('hudOverlay');
+                if (hud) hud.classList.add('hidden');
+                
+                // Reset counters
+                document.getElementById('detectionCount').textContent = '0';
+                document.getElementById('confidenceAvg').textContent = '0%';
+                document.getElementById('detectionList').innerHTML = `
+                    <div class="text-center py-8 text-muted">
+                        <svg class="w-8 h-8 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                        <p class="text-sm">Camera stopped</p>
+                    </div>
+                `;
+            }
+            
+            async function processFrame() {
+                if (!isRunning || !video.videoWidth || !video.videoHeight) {
+                    if (isRunning) {
+                        requestAnimationFrame(processFrame);
+                    }
+                    return;
+                }
+                
+                const startTime = performance.now();
+                
+                // Capture frame
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/jpeg', 0.8);
+                
+                // Convert to blob for API
+                const response = await fetch(imageData);
+                const blob = await response.blob();
+                
+                // Send to inference API
+                const formData = new FormData();
+                formData.append('image', blob);
+                formData.append('model_type', document.getElementById('modelSelect').value);
+                
+                try {
+                    const apiBase = (window.GLOSENTRA_API_BASE || '').replace(/\/$/, '');
+                    const apiResponse = await fetch(`${apiBase}/api/process`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await apiResponse.json();
+                    
+                    if (result.success) {
+                        updateDetections(result.predictions, result.task);
+                        updatePerformanceMetrics(result);
+                    }
+                    
+                } catch (error) {
+                    console.error('Inference error:', error);
+                }
+                
+                const latency = performance.now() - startTime;
+                updateLatencyDisplay(latency);
+                
+                // Continue processing
+                if (isRunning) {
+                    requestAnimationFrame(processFrame);
+                }
+            }
+            
+            function updateDetections(predictions, task) {
+                // Clear previous drawings
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Defaults
+                let itemsForList = [];
+                let avgConfidencePct = 0;
+                const hud = document.getElementById('hudOverlay');
+                const hudContent = document.getElementById('hudContent');
+
+                if (task === 'classify' && predictions && predictions.predictions) {
+                    // Classification: list top predictions
+                    const preds = predictions.predictions;
+                    const totalConf = preds.reduce((sum, p) => sum + (p.confidence || 0), 0);
+                    avgConfidencePct = preds.length ? (totalConf / preds.length) * 100 : 0;
+                    itemsForList = preds.map(p => ({
+                        class: p.class_name || `class_${p.class_id}`,
+                        confidence: p.confidence || 0
+                    }));
+                    document.getElementById('detectionCount').textContent = String(preds.length);
+                    document.getElementById('confidenceAvg').textContent = `${avgConfidencePct.toFixed(1)}%`;
+                    updateDetectionList(itemsForList);
+
+                    // Update HUD
+                    if (hud && hudContent) {
+                        hud.classList.remove('hidden');
+                        hudContent.innerHTML = itemsForList.slice(0, 5).map(item => `
+                            <div class="flex items-center justify-between">
+                                <span>${item.class}</span>
+                                <span class="text-muted">${(item.confidence * 100).toFixed(1)}%</span>
+                            </div>
+                        `).join('');
+                    }
+
+                } else {
+                    // Detection/Segmentation/Pose flows
+                    const confidenceThreshold = parseFloat(document.getElementById('confidenceSlider').value);
+                    const showLabels = document.getElementById('showLabels').checked;
+                    const showConfidence = document.getElementById('showConfidence').checked;
+
+                    const numBoxes = predictions.boxes ? predictions.boxes.length : 0;
+                    let validDetections = [];
+                    let confidenceSum = 0;
+
+                    for (let i = 0; i < numBoxes; i++) {
+                        const confidence = predictions.confidences ? predictions.confidences[i] : 0;
+                        if (confidence >= confidenceThreshold) {
+                            validDetections.push({
+                                box: predictions.boxes[i],
+                                confidence: confidence,
+                                class: predictions.class_names ? predictions.class_names[i] : (predictions.classes ? `Class ${predictions.classes[i]}` : 'Object')
+                            });
+                            confidenceSum += confidence;
+                        }
+                    }
+
+                    // Update counts
+                    document.getElementById('detectionCount').textContent = String(numBoxes);
+                    avgConfidencePct = validDetections.length > 0 ? (confidenceSum / validDetections.length * 100) : 0;
+                    document.getElementById('confidenceAvg').textContent = `${avgConfidencePct.toFixed(1)}%`;
+
+                    // Draw overlay
+                    drawVisualizations(predictions, task, validDetections, { showLabels, showConfidence });
+
+                    // Update list and totals
+                    updateDetectionList(validDetections);
+                    performanceMetrics.totalDetections += validDetections.length;
+                    document.getElementById('totalDetections').textContent = performanceMetrics.totalDetections;
+
+                    // Update HUD with up to 5 items
+                    if (hud && hudContent) {
+                        hud.classList.remove('hidden');
+                        if (validDetections.length === 0) {
+                            hudContent.innerHTML = '<div class="text-muted">No detections</div>';
+                        } else {
+                            hudContent.innerHTML = validDetections.slice(0, 5).map(item => `
+                                <div class="flex items-center justify-between">
+                                    <span>${item.class}</span>
+                                    <span class="text-muted">${(item.confidence * 100).toFixed(1)}%</span>
+                                </div>
+                            `).join('');
+                        }
+                    }
+                }
+
+                performanceMetrics.totalFrames++;
+                document.getElementById('totalFrames').textContent = performanceMetrics.totalFrames;
+            }
+            
+            function updateDetectionList(detections) {
+                const listElement = document.getElementById('detectionList');
+                
+                if (detections.length === 0) {
+                    listElement.innerHTML = '<div class="text-center py-4 text-muted text-sm">No detections</div>';
+                    return;
+                }
+                
+                listElement.innerHTML = detections.map(detection => `
+                    <div class="flex items-center justify-between p-2 bg-glass border border-border rounded">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-sm text-text">${detection.class}</span>
+                        </div>
+                        <span class="text-sm text-muted">${(detection.confidence * 100).toFixed(1)}%</span>
+                    </div>
+                `).join('');
+            }
+            
+            function updatePerformanceMetrics(result) {
+                if (!result) return;
+                const fps = (typeof result.fps === 'number') ? result.fps : (result.timing && result.timing.fps) ? result.timing.fps : 0;
+                const latency = result.timing && typeof result.timing.total_ms === 'number' ? result.timing.total_ms : 0;
+
+                performanceMetrics.fps.push(fps);
+                performanceMetrics.latency.push(latency);
+
+                // Keep only last 100 measurements
+                if (performanceMetrics.fps.length > 100) {
+                    performanceMetrics.fps.shift();
+                    performanceMetrics.latency.shift();
+                }
+
+                // Update displays
+                document.getElementById('fpsCounter').textContent = fps.toFixed(1);
+
+                const avgFps = performanceMetrics.fps.reduce((a, b) => a + b, 0) / performanceMetrics.fps.length;
+                document.getElementById('avgFps').textContent = avgFps.toFixed(1);
+            }
+
+            // Visualization helpers
+            function drawVisualizations(predictions, task, validDetections, options) {
+                const { showLabels, showConfidence } = options || {};
+
+                // Clear
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                if (task === 'classify') {
+                    // No visual overlay for classification
+                    return;
+                }
+
+                // Draw boxes for detect/segment/pose when boxes exist
+                if (validDetections && validDetections.length > 0) {
+                    ctx.strokeStyle = '#8b5cf6';
+                    ctx.lineWidth = 2;
+                    ctx.font = '12px system-ui';
+
+                    validDetections.forEach(detection => {
+                        const [x1, y1, x2, y2] = detection.box;
+                        ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+
+                        if (showLabels || showConfidence) {
+                            const label = showLabels && showConfidence ? 
+                                `${detection.class} (${(detection.confidence * 100).toFixed(1)}%)` :
+                                showLabels ? detection.class :
+                                `${(detection.confidence * 100).toFixed(1)}%`;
+                            const textWidth = ctx.measureText(label).width;
+                            ctx.fillStyle = 'rgba(139, 92, 246, 0.8)';
+                            ctx.fillRect(x1, y1 - 20, textWidth + 8, 20);
+                            ctx.fillStyle = 'white';
+                            ctx.fillText(label, x1 + 4, y1 - 6);
+                        }
+                    });
+                }
+
+                if (task === 'segment' && predictions.masks) {
+                    // Simplified mask rendering placeholder (requires proper mask rasterization for production)
+                    const colors = ['#8b5cf6', '#f472b6', '#10b981', '#f59e0b', '#3b82f6'];
+                    // Here we could visualize mask bounds or semi-transparent overlays if available as polygons/rasters
+                    // Intentionally minimal to avoid heavy processing in the browser
+                }
+
+                if (task === 'pose' && predictions.keypoints) {
+                    const colors = ['#8b5cf6', '#f472b6', '#10b981', '#f59e0b'];
+                    predictions.keypoints.forEach((keypoints) => {
+                        keypoints.forEach((point, index) => {
+                            const [x, y] = point;
+                            const color = colors[index % colors.length];
+                            ctx.fillStyle = color;
+                            ctx.beginPath();
+                            ctx.arc(x, y, 3, 0, 2 * Math.PI);
+                            ctx.fill();
+                        });
+                    });
+                }
+            }
+            
+            function updateLatencyDisplay(latency) {
+                document.getElementById('latencyCounter').textContent = latency.toFixed(1);
+                
+                latencySum += latency;
+                frameCount++;
+                
+                if (frameCount >= 30) { // Update every 30 frames
+                    const avgLatency = latencySum / frameCount;
+                    document.getElementById('avgLatency').textContent = avgLatency.toFixed(1);
+                    latencySum = 0;
+                    frameCount = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
